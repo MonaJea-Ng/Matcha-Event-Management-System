@@ -4,10 +4,19 @@
     <Compile Update="Custom\RB.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Employees_tab.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Events_Info.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Events_tab.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Main_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Services_tab.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

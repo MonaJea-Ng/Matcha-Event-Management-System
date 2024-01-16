@@ -16,3 +16,25 @@ C:\Users\Monica\Desktop\3RD YR- SEM 1\ADET\ADET sample\ADET sample\obj\Debug\net
 C:\Users\Monica\Desktop\3RD YR- SEM 1\ADET\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Properties.Resources.resources
 C:\Users\Monica\Desktop\3RD YR- SEM 1\ADET\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Main_Page.resources
 C:\Users\Monica\Desktop\3RD YR- SEM 1\ADET\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Events_Info.resources
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\bin\Debug\net8.0-windows\ADET sample.exe
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\bin\Debug\net8.0-windows\ADET sample.deps.json
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\bin\Debug\net8.0-windows\ADET sample.runtimeconfig.json
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\bin\Debug\net8.0-windows\ADET sample.dll
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\bin\Debug\net8.0-windows\ADET sample.pdb
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Events_Info.resources
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Main_Page.resources
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Properties.Resources.resources
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.csproj.GenerateResource.cache
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.AssemblyInfoInputs.cache
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.AssemblyInfo.cs
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.csproj.CoreCompileInputs.cache
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.sourcelink.json
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.dll
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\refint\ADET sample.dll
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.pdb
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET sample.genruntimeconfig.cache
+C:\Users\T14\Source\Repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ref\ADET sample.dll
+C:\Users\T14\source\repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Employees_tab.resources
+C:\Users\T14\source\repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Events_tab.resources
+C:\Users\T14\source\repos\Matcha-Event-Management-System\ADET sample\ADET sample\obj\Debug\net8.0-windows\ADET_sample.Services_tab.resources

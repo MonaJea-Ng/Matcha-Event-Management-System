@@ -53,9 +53,10 @@
             // 
             panel3.Controls.Add(Delete_EventInfo);
             panel3.Controls.Add(Edit_EventInfo);
-            panel3.Location = new Point(9, 54);
+            panel3.Location = new Point(7, 41);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(809, 545);
+            panel3.Size = new Size(647, 414);
             panel3.TabIndex = 5;
             // 
             // Delete_EventInfo
@@ -68,9 +69,10 @@
             Delete_EventInfo.FlatAppearance.BorderSize = 0;
             Delete_EventInfo.FlatStyle = FlatStyle.Flat;
             Delete_EventInfo.ForeColor = Color.White;
-            Delete_EventInfo.Location = new Point(407, 499);
+            Delete_EventInfo.Location = new Point(326, 379);
+            Delete_EventInfo.Margin = new Padding(2);
             Delete_EventInfo.Name = "Delete_EventInfo";
-            Delete_EventInfo.Size = new Size(398, 40);
+            Delete_EventInfo.Size = new Size(318, 30);
             Delete_EventInfo.TabIndex = 6;
             Delete_EventInfo.Text = "Delete";
             Delete_EventInfo.TextColor = Color.White;
@@ -86,9 +88,10 @@
             Edit_EventInfo.FlatAppearance.BorderSize = 0;
             Edit_EventInfo.FlatStyle = FlatStyle.Flat;
             Edit_EventInfo.ForeColor = Color.White;
-            Edit_EventInfo.Location = new Point(3, 499);
+            Edit_EventInfo.Location = new Point(2, 379);
+            Edit_EventInfo.Margin = new Padding(2);
             Edit_EventInfo.Name = "Edit_EventInfo";
-            Edit_EventInfo.Size = new Size(398, 40);
+            Edit_EventInfo.Size = new Size(318, 30);
             Edit_EventInfo.TabIndex = 5;
             Edit_EventInfo.Text = "Edit";
             Edit_EventInfo.TextColor = Color.White;
@@ -104,9 +107,10 @@
             ExitButton.FlatAppearance.BorderSize = 0;
             ExitButton.FlatStyle = FlatStyle.Flat;
             ExitButton.ForeColor = Color.White;
-            ExitButton.Location = new Point(9, 605);
+            ExitButton.Location = new Point(7, 460);
+            ExitButton.Margin = new Padding(2);
             ExitButton.Name = "ExitButton";
-            ExitButton.Size = new Size(805, 40);
+            ExitButton.Size = new Size(644, 30);
             ExitButton.TabIndex = 7;
             ExitButton.Text = "Done";
             ExitButton.TextColor = Color.White;
@@ -114,25 +118,21 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(241, 241, 241);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial", 15F, FontStyle.Bold);
-            textBox1.Location = new Point(12, 12);
+            textBox1.Location = new Point(0, 0);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(253, 35);
-            textBox1.TabIndex = 7;
-            textBox1.Text = "Upcoming Event";
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.Size = new Size(100, 26);
+            textBox1.TabIndex = 0;
             // 
             // Events_Info
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(241, 241, 241);
-            ClientSize = new Size(829, 650);
+            BackColor = Color.FromArgb(223, 232, 215);
+            ClientSize = new Size(663, 494);
             Controls.Add(textBox1);
             Controls.Add(ExitButton);
             Controls.Add(panel3);
+            Margin = new Padding(2);
             Name = "Events_Info";
             Text = "Event Information";
             panel3.ResumeLayout(false);
