@@ -24,9 +24,11 @@ namespace ADET_sample
             loadform(new Events_tab());
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        public void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-
+            DateTime selectedDate = e.Start;
+            Events_tab eventsTab = this.mainpanel.Tag as Events_tab; // Get the loaded instance
+            eventsTab.FillEvents(selectedDate);
         }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
