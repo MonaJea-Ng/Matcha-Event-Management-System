@@ -21,14 +21,18 @@ namespace ADET_sample
 
         private void Main_Page_Load_1(object sender, EventArgs e)
         {
-
+            //events for the current day
             loadform(new Events_tab());
+            DateTime today = DateTime.Today;
+            Events_tab eventsTab = this.mainpanel.Tag as Events_tab;
+            eventsTab.FillEventsDataGridView(today);
         }
 
         public void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
+            //events for clicked day
            DateTime selectedDate = e.Start;
-           Events_tab eventsTab = this.mainpanel.Tag as Events_tab; // Get the loaded instance
+           Events_tab eventsTab = this.mainpanel.Tag as Events_tab;
            eventsTab.FillEventsDataGridView(selectedDate);
         }
 

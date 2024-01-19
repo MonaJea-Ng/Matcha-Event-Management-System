@@ -32,18 +32,18 @@ namespace ADET_sample
         {
             process1 = new System.Diagnostics.Process();
             panel3 = new Panel();
-            AddOnsTB = new TextBox();
+            PackageDB = new ComboBox();
+            Staff4DB = new ComboBox();
+            Staff3DB = new ComboBox();
+            Staff2DB = new ComboBox();
+            Staff1DB = new ComboBox();
+            AddOnsDB = new ComboBox();
             PaymentStatusDB = new ComboBox();
             AddOnsLabel = new Label();
             RequestTB = new TextBox();
             TotalTB = new TextBox();
             VenueTB = new TextBox();
             TimeTB = new TextBox();
-            PackageTB = new TextBox();
-            Staff4TB = new TextBox();
-            Staff3TB = new TextBox();
-            Staff2TB = new TextBox();
-            Staff1TB = new TextBox();
             ContactTB = new TextBox();
             DateTB = new TextBox();
             ClientTB = new TextBox();
@@ -79,18 +79,18 @@ namespace ADET_sample
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(AddOnsTB);
+            panel3.Controls.Add(PackageDB);
+            panel3.Controls.Add(Staff4DB);
+            panel3.Controls.Add(Staff3DB);
+            panel3.Controls.Add(Staff2DB);
+            panel3.Controls.Add(Staff1DB);
+            panel3.Controls.Add(AddOnsDB);
             panel3.Controls.Add(PaymentStatusDB);
             panel3.Controls.Add(AddOnsLabel);
             panel3.Controls.Add(RequestTB);
             panel3.Controls.Add(TotalTB);
             panel3.Controls.Add(VenueTB);
             panel3.Controls.Add(TimeTB);
-            panel3.Controls.Add(PackageTB);
-            panel3.Controls.Add(Staff4TB);
-            panel3.Controls.Add(Staff3TB);
-            panel3.Controls.Add(Staff2TB);
-            panel3.Controls.Add(Staff1TB);
             panel3.Controls.Add(ContactTB);
             panel3.Controls.Add(DateTB);
             panel3.Controls.Add(ClientTB);
@@ -113,16 +113,82 @@ namespace ADET_sample
             panel3.TabIndex = 5;
             panel3.Paint += panel3_Paint;
             // 
-            // AddOnsTB
+            // PackageDB
             // 
-            AddOnsTB.BackColor = Color.FromArgb(223, 232, 215);
-            AddOnsTB.BorderStyle = BorderStyle.None;
-            AddOnsTB.Location = new Point(298, 306);
-            AddOnsTB.Multiline = true;
-            AddOnsTB.Name = "AddOnsTB";
-            AddOnsTB.Size = new Size(171, 31);
-            AddOnsTB.TabIndex = 33;
-            AddOnsTB.TextChanged += AddOnsTB_TextChanged;
+            PackageDB.BackColor = Color.FromArgb(223, 232, 215);
+            PackageDB.DropDownStyle = ComboBoxStyle.DropDownList;
+            PackageDB.FormattingEnabled = true;
+            PackageDB.Location = new Point(301, 210);
+            PackageDB.Name = "PackageDB";
+            PackageDB.Size = new Size(140, 33);
+            PackageDB.Sorted = true;
+            PackageDB.TabIndex = 38;
+            PackageDB.SelectedIndexChanged += PackageDB_SelectedIndexChanged;
+            // 
+            // Staff4DB
+            // 
+            Staff4DB.BackColor = Color.FromArgb(223, 232, 215);
+            Staff4DB.DropDownStyle = ComboBoxStyle.DropDownList;
+            Staff4DB.FormattingEnabled = true;
+            Staff4DB.Items.AddRange(new object[] { "None" });
+            Staff4DB.Location = new Point(620, 223);
+            Staff4DB.Name = "Staff4DB";
+            Staff4DB.Size = new Size(140, 33);
+            Staff4DB.Sorted = true;
+            Staff4DB.TabIndex = 37;
+            Staff4DB.SelectedIndexChanged += Staff4DB_SelectedIndexChanged;
+            // 
+            // Staff3DB
+            // 
+            Staff3DB.BackColor = Color.FromArgb(223, 232, 215);
+            Staff3DB.DropDownStyle = ComboBoxStyle.DropDownList;
+            Staff3DB.FormattingEnabled = true;
+            Staff3DB.Items.AddRange(new object[] { "None" });
+            Staff3DB.Location = new Point(620, 189);
+            Staff3DB.Name = "Staff3DB";
+            Staff3DB.Size = new Size(140, 33);
+            Staff3DB.Sorted = true;
+            Staff3DB.TabIndex = 36;
+            Staff3DB.SelectedIndexChanged += Staff3DB_SelectedIndexChanged;
+            // 
+            // Staff2DB
+            // 
+            Staff2DB.BackColor = Color.FromArgb(223, 232, 215);
+            Staff2DB.DropDownStyle = ComboBoxStyle.DropDownList;
+            Staff2DB.FormattingEnabled = true;
+            Staff2DB.Items.AddRange(new object[] { "None" });
+            Staff2DB.Location = new Point(620, 155);
+            Staff2DB.Name = "Staff2DB";
+            Staff2DB.Size = new Size(140, 33);
+            Staff2DB.Sorted = true;
+            Staff2DB.TabIndex = 35;
+            Staff2DB.SelectedIndexChanged += Staff2DB_SelectedIndexChanged;
+            // 
+            // Staff1DB
+            // 
+            Staff1DB.BackColor = Color.FromArgb(223, 232, 215);
+            Staff1DB.DropDownStyle = ComboBoxStyle.DropDownList;
+            Staff1DB.FormattingEnabled = true;
+            Staff1DB.Items.AddRange(new object[] { "None" });
+            Staff1DB.Location = new Point(620, 121);
+            Staff1DB.Name = "Staff1DB";
+            Staff1DB.Size = new Size(140, 33);
+            Staff1DB.Sorted = true;
+            Staff1DB.TabIndex = 34;
+            Staff1DB.SelectedIndexChanged += Staff1DB_SelectedIndexChanged;
+            // 
+            // AddOnsDB
+            // 
+            AddOnsDB.BackColor = Color.FromArgb(223, 232, 215);
+            AddOnsDB.DropDownStyle = ComboBoxStyle.DropDownList;
+            AddOnsDB.FormattingEnabled = true;
+            AddOnsDB.Items.AddRange(new object[] { "None" });
+            AddOnsDB.Location = new Point(301, 303);
+            AddOnsDB.Name = "AddOnsDB";
+            AddOnsDB.Size = new Size(140, 33);
+            AddOnsDB.Sorted = true;
+            AddOnsDB.TabIndex = 33;
+            AddOnsDB.SelectedIndexChanged += AddOnsDB_SelectedIndexChanged;
             // 
             // PaymentStatusDB
             // 
@@ -133,6 +199,7 @@ namespace ADET_sample
             PaymentStatusDB.Location = new Point(620, 306);
             PaymentStatusDB.Name = "PaymentStatusDB";
             PaymentStatusDB.Size = new Size(140, 33);
+            PaymentStatusDB.Sorted = true;
             PaymentStatusDB.TabIndex = 32;
             PaymentStatusDB.SelectedIndexChanged += PaymentStatusDB_SelectedIndexChanged;
             // 
@@ -187,53 +254,6 @@ namespace ADET_sample
             TimeTB.Size = new Size(194, 24);
             TimeTB.TabIndex = 27;
             TimeTB.TextChanged += TimeTB_TextChanged;
-            // 
-            // PackageTB
-            // 
-            PackageTB.BackColor = Color.FromArgb(223, 232, 215);
-            PackageTB.BorderStyle = BorderStyle.None;
-            PackageTB.Location = new Point(306, 206);
-            PackageTB.Name = "PackageTB";
-            PackageTB.Size = new Size(194, 24);
-            PackageTB.TabIndex = 26;
-            PackageTB.TextChanged += textBox1_TextChanged_2;
-            // 
-            // Staff4TB
-            // 
-            Staff4TB.BackColor = Color.FromArgb(223, 232, 215);
-            Staff4TB.BorderStyle = BorderStyle.None;
-            Staff4TB.Location = new Point(623, 207);
-            Staff4TB.Name = "Staff4TB";
-            Staff4TB.Size = new Size(171, 24);
-            Staff4TB.TabIndex = 25;
-            // 
-            // Staff3TB
-            // 
-            Staff3TB.BackColor = Color.FromArgb(223, 232, 215);
-            Staff3TB.BorderStyle = BorderStyle.None;
-            Staff3TB.Location = new Point(623, 177);
-            Staff3TB.Name = "Staff3TB";
-            Staff3TB.Size = new Size(171, 24);
-            Staff3TB.TabIndex = 24;
-            // 
-            // Staff2TB
-            // 
-            Staff2TB.BackColor = Color.FromArgb(223, 232, 215);
-            Staff2TB.BorderStyle = BorderStyle.None;
-            Staff2TB.Location = new Point(623, 147);
-            Staff2TB.Name = "Staff2TB";
-            Staff2TB.Size = new Size(171, 24);
-            Staff2TB.TabIndex = 23;
-            // 
-            // Staff1TB
-            // 
-            Staff1TB.BackColor = Color.FromArgb(223, 232, 215);
-            Staff1TB.BorderStyle = BorderStyle.None;
-            Staff1TB.Location = new Point(623, 117);
-            Staff1TB.Name = "Staff1TB";
-            Staff1TB.Size = new Size(171, 24);
-            Staff1TB.TabIndex = 22;
-            Staff1TB.TextChanged += Staff1TB_TextChanged;
             // 
             // ContactTB
             // 
@@ -410,7 +430,7 @@ namespace ADET_sample
             Edit_EventInfo.Name = "Edit_EventInfo";
             Edit_EventInfo.Size = new Size(398, 39);
             Edit_EventInfo.TabIndex = 5;
-            Edit_EventInfo.Text = "Save";
+            Edit_EventInfo.Text = "Edit";
             Edit_EventInfo.TextColor = Color.White;
             Edit_EventInfo.UseVisualStyleBackColor = false;
             Edit_EventInfo.Click += Edit_EventInfo_Click;
@@ -484,20 +504,21 @@ namespace ADET_sample
         private Label TimeLabel;
         private Label RequestLabel;
         private Label PaymentStatusLabel;
-        private TextBox Staff4TB;
-        private TextBox Staff3TB;
-        private TextBox Staff2TB;
-        private TextBox Staff1TB;
         private TextBox ContactTB;
         private TextBox DateTB;
         private TextBox ClientTB;
-        private TextBox AddOnsTB;
-        private TextBox PackageTB;
         private TextBox RequestTB;
         private TextBox TotalTB;
         private TextBox VenueTB;
         private TextBox TimeTB;
         private Label AddOnsLabel;
         private ComboBox PaymentStatusDB;
+        private ComboBox Staff4DB;
+        private ComboBox Staff3DB;
+        private ComboBox Staff2DB;
+        private ComboBox Staff1DB;
+        private ComboBox AddOnsDB;
+        private ComboBox PackageDB;
+        
     }
 }

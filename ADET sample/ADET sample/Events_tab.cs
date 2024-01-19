@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
-using System.Data.Common;
 
 namespace ADET_sample
 {
@@ -55,8 +45,10 @@ namespace ADET_sample
                 string venue = selectedRow.Cells["Venue"].Value.ToString();
                 string time = selectedRow.Cells["Event_Time"].Value.ToString();
                 string clientName = selectedRow.Cells["Client_Name"].Value.ToString();
+
                 DateTime selectedEventDate = Convert.ToDateTime(selectedRow.Cells["Event_Date"].Value);
                 string eventDate = selectedEventDate.ToString("yyyy-MM-dd");
+
                 string package = selectedRow.Cells["Package"].Value.ToString();
                 string addOns = selectedRow.Cells["Add_Ons"].Value.ToString();
                 string paymentStatus = selectedRow.Cells["Payment_Status"].Value.ToString();
@@ -64,9 +56,11 @@ namespace ADET_sample
                 string staff2 = selectedRow.Cells["Staff_2"].Value.ToString();
                 string staff3 = selectedRow.Cells["Staff_3"].Value.ToString();
                 string staff4 = selectedRow.Cells["Staff_4"].Value.ToString();
+                string contact = selectedRow.Cells["Contact"].Value.ToString();
+                string request = selectedRow.Cells["Other_Request"].Value.ToString();
 
-                Events_Info eventsInfoForm = new Events_Info(eventName, eventType, venue, time, clientName, eventDate, 
-                    package, addOns, paymentStatus, staff1, staff2, staff3, staff4);
+                Events_Info eventsInfoForm = new Events_Info(this, eventName, eventType, venue, time, clientName, eventDate, 
+                    package, addOns, paymentStatus, staff1, staff2, staff3, staff4, contact, request);
                 eventsInfoForm.Show();
             }
         }
@@ -99,6 +93,7 @@ namespace ADET_sample
                 UpcomingEventsData.Columns["Staff_3"].Visible = false;
                 UpcomingEventsData.Columns["Staff_4"].Visible = false;
                 UpcomingEventsData.Columns["Other_Request"].Visible = false;
+                UpcomingEventsData.Columns["Contact"].Visible = false;
             }
         }
     }
