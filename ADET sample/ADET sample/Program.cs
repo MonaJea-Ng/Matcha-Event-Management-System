@@ -29,7 +29,7 @@ namespace ADET_sample
     {
         public static MySqlConnection GetConnection()
         {
-            string connstring = "server = localhost;uid=root;pwd=SQLKoTo05!;database=matcha_em_sys"; // Adjust credentials as needed
+            string connstring = "server = localhost;uid=root;pwd=SQLKoTo05!;database=matcha_em_sys;"; // Change pwd according to password ng local db niyo sa sql
             return new MySqlConnection(connstring);
         }
     }
