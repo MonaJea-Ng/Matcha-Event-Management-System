@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace ADET_sample
 {
-    static class Program
+    public class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -20,4 +22,13 @@ namespace ADET_sample
             Application.Run(new Main_Page());
         }
     }
+    public class DatabaseConnection
+    {
+        public static MySqlConnection GetConnection()
+        {
+            string connstring = "server = 127.0.0.1; Port=3307;uid=root;pwd=Matcha123;database=matcha"; // Adjust credentials as needed
+            return new MySqlConnection(connstring);
+        }
+    }
+
 }

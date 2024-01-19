@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees_tab));
             label1 = new Label();
             AddEventButton = new ADETADET_sample.RBButton();
             Employees_List_Datagrid = new DataGridView();
@@ -39,7 +42,7 @@
             status = new DataGridViewTextBoxColumn();
             work = new DataGridViewTextBoxColumn();
             rate = new DataGridViewTextBoxColumn();
-            edit_button = new DataGridViewButtonColumn();
+            edit_button_image = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)Employees_List_Datagrid).BeginInit();
             SuspendLayout();
             // 
@@ -77,63 +80,95 @@
             // 
             Employees_List_Datagrid.AllowUserToAddRows = false;
             Employees_List_Datagrid.AllowUserToDeleteRows = false;
+            Employees_List_Datagrid.AllowUserToResizeColumns = false;
+            Employees_List_Datagrid.AllowUserToResizeRows = false;
             Employees_List_Datagrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Employees_List_Datagrid.BackgroundColor = Color.FromArgb(223, 232, 215);
             Employees_List_Datagrid.BorderStyle = BorderStyle.None;
+            Employees_List_Datagrid.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            Employees_List_Datagrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(46, 60, 24);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(223, 232, 215);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ControlText;
+            Employees_List_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             Employees_List_Datagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Employees_List_Datagrid.Columns.AddRange(new DataGridViewColumn[] { employee_id, firstname, lastname, status, work, rate, edit_button });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(223, 232, 215);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(46, 60, 24);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            Employees_List_Datagrid.DefaultCellStyle = dataGridViewCellStyle4;
+            Employees_List_Datagrid.Columns.AddRange(new DataGridViewColumn[] { employee_id, firstname, lastname, status, work, rate, edit_button_image });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(223, 232, 215);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(46, 60, 24);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            Employees_List_Datagrid.DefaultCellStyle = dataGridViewCellStyle3;
+            Employees_List_Datagrid.EnableHeadersVisualStyles = false;
             Employees_List_Datagrid.GridColor = Color.FromArgb(46, 60, 24);
             Employees_List_Datagrid.Location = new Point(30, 56);
             Employees_List_Datagrid.Name = "Employees_List_Datagrid";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(46, 60, 24);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            Employees_List_Datagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            Employees_List_Datagrid.RowHeadersVisible = false;
+            Employees_List_Datagrid.SelectionMode = DataGridViewSelectionMode.CellSelect;
             Employees_List_Datagrid.Size = new Size(918, 498);
             Employees_List_Datagrid.TabIndex = 11;
+            Employees_List_Datagrid.CellContentClick += Employees_List_Datagrid_CellContentClick;
             // 
             // employee_id
             // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(223, 232, 215);
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            employee_id.DefaultCellStyle = dataGridViewCellStyle3;
+            employee_id.DataPropertyName = "employee_id";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(223, 232, 215);
+            dataGridViewCellStyle2.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            employee_id.DefaultCellStyle = dataGridViewCellStyle2;
             employee_id.HeaderText = "Employee ID";
             employee_id.Name = "employee_id";
             // 
             // firstname
             // 
+            firstname.DataPropertyName = "first_name";
             firstname.HeaderText = "First Name";
             firstname.Name = "firstname";
             // 
             // lastname
             // 
+            lastname.DataPropertyName = "last_name";
             lastname.HeaderText = "Last Name";
             lastname.Name = "lastname";
             // 
             // status
             // 
+            status.DataPropertyName = "status";
             status.HeaderText = "Status";
             status.Name = "status";
             // 
             // work
             // 
+            work.DataPropertyName = "Work";
             work.HeaderText = "Work";
             work.Name = "work";
             // 
             // rate
             // 
+            rate.DataPropertyName = "Rate";
             rate.HeaderText = "Rate";
             rate.Name = "rate";
             // 
-            // edit_button
+            // edit_button_image
             // 
-            edit_button.HeaderText = "Edit";
-            edit_button.Name = "edit_button";
+            edit_button_image.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            edit_button_image.HeaderText = "";
+            edit_button_image.Image = (Image)resources.GetObject("edit_button_image.Image");
+            edit_button_image.Name = "edit_button_image";
+            edit_button_image.Width = 5;
             // 
             // Employees_tab
             // 
@@ -164,6 +199,6 @@
         private DataGridViewTextBoxColumn status;
         private DataGridViewTextBoxColumn work;
         private DataGridViewTextBoxColumn rate;
-        private DataGridViewButtonColumn edit_button;
+        private DataGridViewImageColumn edit_button_image;
     }
 }

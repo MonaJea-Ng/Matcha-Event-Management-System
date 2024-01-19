@@ -24,7 +24,7 @@ namespace ADET_sample
             loadform(new Events_tab());
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        public void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
