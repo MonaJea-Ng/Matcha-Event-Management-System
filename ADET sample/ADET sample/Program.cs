@@ -25,12 +25,15 @@ namespace ADET_sample
         }
     }
 
+
     public class DatabaseConnection
     {
         public static MySqlConnection GetConnection()
         {
-            string connstring = "server = localhost;uid=root;pwd=SQLKoTo05!;database=matcha_em_sys;"; // Change pwd according to password ng local db niyo sa sql
+
+            string connstring = "server = 127.0.0.1; Port=3307;uid=root;pwd=Matcha123;database=matcha"; // Adjust credentials as needed
             return new MySqlConnection(connstring);
         }
     }
+            
 }
