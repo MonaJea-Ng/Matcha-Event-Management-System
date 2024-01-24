@@ -18,17 +18,22 @@ namespace ADET_sample
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            
+
             ApplicationConfiguration.Initialize();
             Application.Run(new Main_Page());
         }
     }
+
+
     public class DatabaseConnection
     {
         public static MySqlConnection GetConnection()
         {
+
             string connstring = "server = 127.0.0.1; Port=3307;uid=root;pwd=Matcha123;database=matcha"; // Adjust credentials as needed
             return new MySqlConnection(connstring);
         }
     }
-
+            
 }
