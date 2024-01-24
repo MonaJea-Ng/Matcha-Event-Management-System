@@ -31,7 +31,7 @@ namespace ADET_sample
         public static MySqlConnection GetConnection()
         {
 
-            string connstring = "server = 127.0.0.1; Port=3307;uid=root;pwd=Matcha123;database=matcha"; // Adjust credentials as needed
+            string connstring = "server = 127.0.0.1; Port=3307;uid=root;pwd=administrator;database=matcha"; // Adjust credentials as needed
             return new MySqlConnection(connstring);
         }
     }
