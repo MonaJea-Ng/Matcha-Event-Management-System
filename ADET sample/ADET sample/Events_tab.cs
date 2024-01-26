@@ -1,5 +1,7 @@
 ﻿using System.Data;
+using System.IO.Packaging;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace ADET_sample
 {
@@ -12,9 +14,9 @@ namespace ADET_sample
 
         private void AddEventButton_Click(object sender, EventArgs e)
         {
-            //Events_Info events_Info = new Events_Info();
-            //this.Visibility = Visibility.Hidden;
-            //events_Info.Show();
+            Events_Info events_Info = new Events_Info(this, "", "", "", "", "", "",
+                    "", "", "", "", "", "", "", "", "");
+            events_Info.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

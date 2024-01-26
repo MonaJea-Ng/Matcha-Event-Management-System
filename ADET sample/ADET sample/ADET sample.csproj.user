@@ -4,9 +4,6 @@
     <Compile Update="Custom\RB.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Edit_Employee_Row.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Employees_tab.cs">
       <SubType>Form</SubType>
     </Compile>

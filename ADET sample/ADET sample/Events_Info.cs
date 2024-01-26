@@ -58,10 +58,9 @@ namespace ADET_sample
                 }
 
             }
-            // CONNECTION DONE
 
 
-            //For Event Name, Textbox will appear if null.
+            //If Event Name is null(means adding a new Event)
             if (eventName == null && eventType == null || eventName == "" && eventType == "")
             {
                 EventNameLabel.Visible = false;
@@ -75,93 +74,95 @@ namespace ADET_sample
                 EventNameTB.Size = new Size(0, 32);
                 EventNameTB.TabIndex = 7;
                 EventNameTB.TextChanged += EventNameTB_TextChanged;
+
             }
-            else
+            else//for displaying selected date event and editing event details.
             {
                 EventNameLabel.Text = eventName + " - " + eventType;
+                //Making All Text Box initially display values according to Database's record
+                VenueTB.ReadOnly = true;
+                VenueTB.Text = venue;
+
+                TimeTB.ReadOnly = true;
+                TimeTB.Text = time;
+
+                ClientTB.ReadOnly = true;
+                ClientTB.Text = clientName;
+
+                DateTB.ReadOnly = true;
+                DateTB.Text = eventDate;
+
+                ContactTB.ReadOnly = true;
+                ContactTB.Text = contact;
+
+                RequestTB.ReadOnly = true;
+                RequestTB.Text = request;
+
+                //Making Drop Down options static
+                PackageDB.Enabled = false;
+                PaymentStatusDB.Enabled = false;
+                Staff1DB.Enabled = false;
+                Staff2DB.Enabled = false;
+                Staff3DB.Enabled = false;
+                Staff4DB.Enabled = false;
+                AddOnsDB.Enabled = false;
+
+
+
+                PackageDB.Text = package;
+
+                if (addOns != "")
+                {
+                    AddOnsDB.Text = addOns;
+                }
+                else
+                {
+                    AddOnsDB.Text = "None";
+                }
+
+
+
+                PaymentStatusDB.Text = paymentStatus;
+
+
+                if (staff1 != "")
+                {
+                    Staff1DB.Text = staff1;
+                }
+                else
+                {
+                    Staff1DB.Visible = false;
+                }
+
+                if (staff2 != "")
+                {
+                    Staff2DB.Text = staff2;
+                }
+                else
+                {
+                    Staff2DB.Visible = false;
+                }
+                if (staff3 != "")
+                {
+                    Staff3DB.Text = staff3;
+                }
+                else
+                {
+                    Staff3DB.Visible = false;
+                }
+                if (staff4 != "")
+                {
+                    Staff4DB.Text = staff4;
+                }
+                else
+                {
+                    Staff4DB.Visible = false;
+                }
             }
 
 
 
-            //Making All Text Box initially display values according to Database's record
-            VenueTB.ReadOnly = true;
-            VenueTB.Text = venue;
 
-            TimeTB.ReadOnly = true;
-            TimeTB.Text = time;
-
-            ClientTB.ReadOnly = true;
-            ClientTB.Text = clientName;
-
-            DateTB.ReadOnly = true;
-            DateTB.Text = eventDate;
-
-            ContactTB.ReadOnly = true;
-            ContactTB.Text = contact;
-
-            RequestTB.ReadOnly = true;
-            RequestTB.Text = request;
-
-            //Making Drop Down options static
-            PackageDB.Enabled = false;
-            PaymentStatusDB.Enabled = false;
-            Staff1DB.Enabled = false;
-            Staff2DB.Enabled = false;
-            Staff3DB.Enabled = false;
-            Staff4DB.Enabled = false;
-            AddOnsDB.Enabled = false;
-
-
-
-            PackageDB.Text = package;
-
-            if (addOns != "")
-            {
-                AddOnsDB.Text = addOns;
-            }
-            else
-            {
-                AddOnsDB.Text = "None";
-            }
-
-
-
-            PaymentStatusDB.Text = paymentStatus;
-
-
-            if (staff1 != "")
-            {
-                Staff1DB.Text = staff1;
-            }
-            else
-            {
-                Staff1DB.Visible = false;
-            }
-
-            if (staff2 != "")
-            {
-                Staff2DB.Text = staff2;
-            }
-            else
-            {
-                Staff2DB.Visible = false;
-            }
-            if (staff3 != "")
-            {
-                Staff3DB.Text = staff3;
-            }
-            else
-            {
-                Staff3DB.Visible = false;
-            }
-            if (staff4 != "")
-            {
-                Staff4DB.Text = staff4;
-            }
-            else
-            {
-                Staff4DB.Visible = false;
-            }
         }
 
 
@@ -224,6 +225,7 @@ namespace ADET_sample
         {
 
         }
+
 
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
@@ -322,6 +324,9 @@ namespace ADET_sample
             AddOnsDB.Visible = true;
             ExitButton.Text = "Save";
 
+            //new pick date button appears
+            PickDateBT.Visible = true;
+
         }
 
         private void Delete_EventInfo_Click(object sender, EventArgs e)
@@ -330,7 +335,8 @@ namespace ADET_sample
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
-        {
+        {//to be transfered in "Save" button after clicking sure?
+
             string eventName = this.eventName;
             string eventType = this.eventType;
             string venue = VenueTB.Text;
@@ -348,10 +354,10 @@ namespace ADET_sample
             string staff4 = (Staff4DB.SelectedItem == null || Staff4DB.SelectedItem == "" || Staff4DB.SelectedItem == "None") ? "" : Staff4DB.SelectedItem.ToString();
 
             string addOns = AddOnsDB.SelectedItem.ToString();
-            
+
 
             UpdatingEventDataBase(eventName, eventType, venue, time, clientName, eventDate,
-                    package, addOns, paymentStatus, staff1, staff2, staff3, staff4, contact,request);
+                    package, addOns, paymentStatus, staff1, staff2, staff3, staff4, contact, request);
             RefreshDataGridView();
             this.Close();
 
@@ -428,7 +434,25 @@ namespace ADET_sample
         {
             eventsTab.FillEventsDataGridView(DateTime.Today);
         }
+
+        private void PickDateBT_Click(object sender, EventArgs e)
+        {
+            PickDateBT.Visible = true;
+            EventInfoDatePicker.Visible = true;
+            
+        }
+        private void EventInfoDatePicker_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            // Set the selected date to DateTB
+            DateTB.Text = EventInfoDatePicker.SelectionStart.ToString("yyyy-MM-dd");
+
+            // Hide the calendar
+            EventInfoDatePicker.Visible = false;
+        }
+
+
     }
+
 }
 
 
