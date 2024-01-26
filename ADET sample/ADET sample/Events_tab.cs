@@ -2,11 +2,13 @@
 using System.IO.Packaging;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ADET_sample
 {
     public partial class Events_tab : Form
     {
+        private DateTime inititalSelectedDate;
         public Events_tab()
         {
             InitializeComponent();
@@ -14,7 +16,9 @@ namespace ADET_sample
 
         private void AddEventButton_Click(object sender, EventArgs e)
         {
-            Events_Info events_Info = new Events_Info(this, "", "", "", "", "", "",
+            DateTime dateToConvert = this.inititalSelectedDate;
+            string eventDate = dateToConvert.ToString("yyyy-MM-dd");
+            Events_Info events_Info = new Events_Info(this, "", "", "", "", "", eventDate,
                     "", "", "", "", "", "", "", "", "");
             events_Info.Show();
         }
@@ -72,6 +76,7 @@ namespace ADET_sample
         {
             using (MySqlConnection con = DatabaseConnection.GetConnection())
             {
+                this.inititalSelectedDate = selectedDate;
                 con.Open();
                 MySqlDataAdapter Events = new MySqlDataAdapter("SELECT * FROM event WHERE DATE_FORMAT(Event_date, '%Y/%m/%d') = @selectedDate  ", con);
                 Events.SelectCommand.Parameters.AddWithValue("@selectedDate", selectedDate);
