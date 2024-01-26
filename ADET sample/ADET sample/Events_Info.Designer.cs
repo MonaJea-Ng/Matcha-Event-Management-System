@@ -31,6 +31,7 @@ namespace ADET_sample
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Events_Info));
             process1 = new System.Diagnostics.Process();
             panel3 = new Panel();
             EventInfoDatePicker = new MonthCalendar();
@@ -59,7 +60,11 @@ namespace ADET_sample
             DateLabel = new Label();
             ClientLabel = new Label();
             EventNameLabel = new Label();
+            Delete_EventInfo = new ADETADET_sample.RBButton();
+            Edit_EventInfo = new ADETADET_sample.RBButton();
+            PickDateBT = new ADETADET_sample.RBButton();
             EventInfoLabel = new Label();
+            ExitButton = new ADETADET_sample.RBButton();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -104,6 +109,9 @@ namespace ADET_sample
             panel3.Controls.Add(DateLabel);
             panel3.Controls.Add(ClientLabel);
             panel3.Controls.Add(EventNameLabel);
+            panel3.Controls.Add(Delete_EventInfo);
+            panel3.Controls.Add(Edit_EventInfo);
+            panel3.Controls.Add(PickDateBT);
             panel3.Location = new Point(8, 54);
             panel3.Margin = new Padding(2, 3, 2, 3);
             panel3.Name = "panel3";
@@ -113,7 +121,7 @@ namespace ADET_sample
             // 
             // EventInfoDatePicker
             // 
-            EventInfoDatePicker.Location = new Point(39, 117);
+            EventInfoDatePicker.Location = new Point(33, 121);
             EventInfoDatePicker.Name = "EventInfoDatePicker";
             EventInfoDatePicker.TabIndex = 39;
             EventInfoDatePicker.Visible = false;
@@ -401,6 +409,68 @@ namespace ADET_sample
             EventNameLabel.TextAlign = ContentAlignment.MiddleLeft;
             EventNameLabel.Click += EventNameLabel_Click;
             // 
+            // Delete_EventInfo
+            // 
+            Delete_EventInfo.BackColor = Color.FromArgb(46, 60, 24);
+            Delete_EventInfo.BackgroundColor = Color.FromArgb(46, 60, 24);
+            Delete_EventInfo.BorderColor = Color.PaleVioletRed;
+            Delete_EventInfo.BorderRadius = 8;
+            Delete_EventInfo.BorderSize = 0;
+            Delete_EventInfo.FlatAppearance.BorderSize = 0;
+            Delete_EventInfo.FlatStyle = FlatStyle.Flat;
+            Delete_EventInfo.ForeColor = Color.White;
+            Delete_EventInfo.Location = new Point(408, 499);
+            Delete_EventInfo.Margin = new Padding(2, 3, 2, 3);
+            Delete_EventInfo.Name = "Delete_EventInfo";
+            Delete_EventInfo.Size = new Size(398, 39);
+            Delete_EventInfo.TabIndex = 6;
+            Delete_EventInfo.Text = "Delete";
+            Delete_EventInfo.TextColor = Color.White;
+            Delete_EventInfo.UseVisualStyleBackColor = false;
+            Delete_EventInfo.Click += Delete_EventInfo_Click;
+            // 
+            // Edit_EventInfo
+            // 
+            Edit_EventInfo.BackColor = Color.FromArgb(46, 60, 24);
+            Edit_EventInfo.BackgroundColor = Color.FromArgb(46, 60, 24);
+            Edit_EventInfo.BorderColor = Color.PaleVioletRed;
+            Edit_EventInfo.BorderRadius = 8;
+            Edit_EventInfo.BorderSize = 0;
+            Edit_EventInfo.FlatAppearance.BorderSize = 0;
+            Edit_EventInfo.FlatStyle = FlatStyle.Flat;
+            Edit_EventInfo.ForeColor = Color.White;
+            Edit_EventInfo.Location = new Point(2, 499);
+            Edit_EventInfo.Margin = new Padding(2, 3, 2, 3);
+            Edit_EventInfo.Name = "Edit_EventInfo";
+            Edit_EventInfo.Size = new Size(398, 39);
+            Edit_EventInfo.TabIndex = 5;
+            Edit_EventInfo.Text = "Edit";
+            Edit_EventInfo.TextColor = Color.White;
+            Edit_EventInfo.UseVisualStyleBackColor = false;
+            Edit_EventInfo.Click += Edit_EventInfo_Click;
+            // 
+            // PickDateBT
+            // 
+            PickDateBT.BackColor = Color.FromArgb(223, 232, 215);
+            PickDateBT.BackgroundColor = Color.FromArgb(223, 232, 215);
+            PickDateBT.BackgroundImage = (Image)resources.GetObject("PickDateBT.BackgroundImage");
+            PickDateBT.BackgroundImageLayout = ImageLayout.Center;
+            PickDateBT.BorderColor = Color.PaleVioletRed;
+            PickDateBT.BorderRadius = 8;
+            PickDateBT.BorderSize = 0;
+            PickDateBT.FlatAppearance.BorderSize = 0;
+            PickDateBT.FlatStyle = FlatStyle.Flat;
+            PickDateBT.ForeColor = Color.Black;
+            PickDateBT.Location = new Point(220, 117);
+            PickDateBT.Margin = new Padding(2, 3, 2, 3);
+            PickDateBT.Name = "PickDateBT";
+            PickDateBT.Size = new Size(39, 42);
+            PickDateBT.TabIndex = 40;
+            PickDateBT.TextColor = Color.Black;
+            PickDateBT.UseVisualStyleBackColor = false;
+            PickDateBT.Visible = false;
+            PickDateBT.Click += PickDateBT_Click;
+            // 
             // EventInfoLabel
             // 
             EventInfoLabel.AutoSize = true;
@@ -413,6 +483,26 @@ namespace ADET_sample
             EventInfoLabel.Text = "Event Information";
             EventInfoLabel.Click += EventInfoLabel_Click;
             // 
+            // ExitButton
+            // 
+            ExitButton.BackColor = Color.FromArgb(46, 60, 24);
+            ExitButton.BackgroundColor = Color.FromArgb(46, 60, 24);
+            ExitButton.BorderColor = Color.PaleVioletRed;
+            ExitButton.BorderRadius = 8;
+            ExitButton.BorderSize = 0;
+            ExitButton.FlatAppearance.BorderSize = 0;
+            ExitButton.FlatStyle = FlatStyle.Flat;
+            ExitButton.ForeColor = Color.White;
+            ExitButton.Location = new Point(9, 605);
+            ExitButton.Margin = new Padding(2, 3, 2, 3);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(805, 39);
+            ExitButton.TabIndex = 7;
+            ExitButton.Text = "Done";
+            ExitButton.TextColor = Color.White;
+            ExitButton.UseVisualStyleBackColor = false;
+            ExitButton.Click += ExitButton_Click;
+            // 
             // Events_Info
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -420,6 +510,7 @@ namespace ADET_sample
             BackColor = Color.FromArgb(223, 232, 215);
             ClientSize = new Size(829, 650);
             Controls.Add(EventInfoLabel);
+            Controls.Add(ExitButton);
             Controls.Add(panel3);
             Margin = new Padding(2, 3, 2, 3);
             Name = "Events_Info";
