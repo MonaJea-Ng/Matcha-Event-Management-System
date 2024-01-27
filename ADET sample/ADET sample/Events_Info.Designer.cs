@@ -70,10 +70,10 @@ namespace ADET_sample
             UnderlinedContact = new TextBox();
             UnderlinedTime = new TextBox();
             UnderlinedVenue = new TextBox();
-            EventInfoLabel = new Label();
-            ExitButton = new ADETADET_sample.RBButton();
             UnderlineEventName = new TextBox();
             UnderlineEventType = new TextBox();
+            EventInfoLabel = new Label();
+            ExitButton = new ADETADET_sample.RBButton();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -451,8 +451,8 @@ namespace ADET_sample
             // 
             // Delete_EventInfo
             // 
-            Delete_EventInfo.BackColor = Color.FromArgb(46, 60, 24);
-            Delete_EventInfo.BackgroundColor = Color.FromArgb(46, 60, 24);
+            Delete_EventInfo.BackColor = Color.Firebrick;
+            Delete_EventInfo.BackgroundColor = Color.Firebrick;
             Delete_EventInfo.BorderColor = Color.PaleVioletRed;
             Delete_EventInfo.BorderRadius = 8;
             Delete_EventInfo.BorderSize = 0;
@@ -570,6 +570,30 @@ namespace ADET_sample
             UnderlinedVenue.TabStop = false;
             UnderlinedVenue.Text = "_____________________________";
             // 
+            // UnderlineEventName
+            // 
+            UnderlineEventName.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineEventName.BorderStyle = BorderStyle.None;
+            UnderlineEventName.Location = new Point(36, 28);
+            UnderlineEventName.Name = "UnderlineEventName";
+            UnderlineEventName.ReadOnly = true;
+            UnderlineEventName.Size = new Size(229, 24);
+            UnderlineEventName.TabIndex = 48;
+            UnderlineEventName.TabStop = false;
+            UnderlineEventName.Text = "_____________________________";
+            // 
+            // UnderlineEventType
+            // 
+            UnderlineEventType.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineEventType.BorderStyle = BorderStyle.None;
+            UnderlineEventType.Location = new Point(298, 28);
+            UnderlineEventType.Name = "UnderlineEventType";
+            UnderlineEventType.ReadOnly = true;
+            UnderlineEventType.Size = new Size(229, 24);
+            UnderlineEventType.TabIndex = 49;
+            UnderlineEventType.TabStop = false;
+            UnderlineEventType.Text = "_____________________________";
+            // 
             // EventInfoLabel
             // 
             EventInfoLabel.AutoSize = true;
@@ -601,30 +625,6 @@ namespace ADET_sample
             ExitButton.TextColor = Color.White;
             ExitButton.UseVisualStyleBackColor = false;
             ExitButton.Click += ExitButton_Click;
-            // 
-            // UnderlineEventName
-            // 
-            UnderlineEventName.BackColor = Color.FromArgb(223, 232, 215);
-            UnderlineEventName.BorderStyle = BorderStyle.None;
-            UnderlineEventName.Location = new Point(36, 28);
-            UnderlineEventName.Name = "UnderlineEventName";
-            UnderlineEventName.ReadOnly = true;
-            UnderlineEventName.Size = new Size(229, 24);
-            UnderlineEventName.TabIndex = 48;
-            UnderlineEventName.TabStop = false;
-            UnderlineEventName.Text = "_____________________________";
-            // 
-            // UnderlineEventType
-            // 
-            UnderlineEventType.BackColor = Color.FromArgb(223, 232, 215);
-            UnderlineEventType.BorderStyle = BorderStyle.None;
-            UnderlineEventType.Location = new Point(298, 28);
-            UnderlineEventType.Name = "UnderlineEventType";
-            UnderlineEventType.ReadOnly = true;
-            UnderlineEventType.Size = new Size(229, 24);
-            UnderlineEventType.TabIndex = 49;
-            UnderlineEventType.TabStop = false;
-            UnderlineEventType.Text = "_____________________________";
             // 
             // Events_Info
             // 
