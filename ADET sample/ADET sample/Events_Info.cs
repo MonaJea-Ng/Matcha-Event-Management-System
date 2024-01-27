@@ -1,4 +1,5 @@
-﻿using Google.Protobuf.WellKnownTypes;
+﻿using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
 using Org.BouncyCastle.Asn1.Ocsp;
@@ -174,6 +175,8 @@ namespace ADET_sample
                 UnderlinedContact.Visible = false;
                 UnderlinedTime.Visible = false;
                 UnderlinedVenue.Visible = false;
+                UnderlineEventName.Visible = false;
+                UnderlineEventType.Visible = false;
 
                 PackageDB.Text = package;
 
@@ -388,11 +391,6 @@ namespace ADET_sample
             Staff3DB.Visible = true;
             Staff4DB.Visible = true;
             AddOnsDB.Visible = true;
-            if (Edit_EventInfo.Text != "Add Event")
-            {
-                Edit_EventInfo.Text = "Save";
-                PickDateBT.Visible = true;
-            }
 
             //new pick date button appears
             
@@ -429,6 +427,78 @@ namespace ADET_sample
 
                     UpdatingEventDataBase(eventName, eventType, venue, time, clientName, eventDate,
                             package, addOns, paymentStatus, staff1, staff2, staff3, staff4, contact, request);
+                    
+
+                    //Making All Text Box initially display values according to Database's record
+                    VenueTB.ReadOnly = true;
+                    VenueTB.Text = venue;
+
+                    TimeTB.ReadOnly = true;
+                    TimeTB.Text = time;
+
+                    ClientTB.ReadOnly = true;
+                    ClientTB.Text = clientName;
+
+                    DateTB.ReadOnly = true;
+                    DateTB.Text = eventDate;
+
+                    ContactTB.ReadOnly = true;
+                    ContactTB.Text = contact;
+
+                    RequestTB.ReadOnly = true;
+                    RequestTB.Text = request;
+
+                    //Making Drop Down options static
+                    PackageDB.Enabled = false;
+                    PaymentStatusDB.Enabled = false;
+                    Staff1DB.Enabled = false;
+                    Staff2DB.Enabled = false;
+                    Staff3DB.Enabled = false;
+                    Staff4DB.Enabled = false;
+                    AddOnsDB.Enabled = false;
+
+                    //visibility of underlines
+                    UnderlineClient.Visible = false;
+                    UnderlineDate.Visible = false;
+                    UnderlinedContact.Visible = false;
+                    UnderlinedTime.Visible = false;
+                    UnderlinedVenue.Visible = false;
+
+                    PackageDB.Text = package;
+
+                    if (addOns != "")
+                    {
+                        AddOnsDB.Text = addOns;
+                    }
+                    else
+                    {
+                        AddOnsDB.Text = "None";
+                    }
+
+
+
+                    PaymentStatusDB.Text = paymentStatus;
+
+
+                    // Making the remaining Staff combo boxes static
+                    Staff1DB.Enabled = false;
+                    Staff2DB.Enabled = false;
+                    Staff3DB.Enabled = false;
+                    Staff4DB.Enabled = false;
+
+                    // Visibility of remaining Staff combo boxes
+                    Staff1DB.Visible = !string.IsNullOrEmpty(staff1);
+                    Staff2DB.Visible = !string.IsNullOrEmpty(staff2);
+                    Staff3DB.Visible = !string.IsNullOrEmpty(staff3);
+                    Staff4DB.Visible = !string.IsNullOrEmpty(staff4);
+
+                    // Set the text for the remaining Staff combo boxes
+                    Staff1DB.Text = staff1;
+                    Staff2DB.Text = staff2;
+                    Staff3DB.Text = staff3;
+                    Staff4DB.Text = staff4;
+
+                    //refresh data grid
                     RefreshDataGridView();
                 }
                 else
@@ -477,8 +547,7 @@ namespace ADET_sample
 
                     UpdatingEventDataBase(eventName, eventType, venue, time, clientName, eventDate,
                             package, addOns, paymentStatus, staff1, staff2, staff3, staff4, contact, request);
-                    RefreshDataGridView();
-
+                    
                     //Locking saved values from saving
                     EventNameLabel.Visible = true;
                     EventNameTB.Visible = false;
@@ -551,10 +620,18 @@ namespace ADET_sample
                     Staff1DB.Text = staff1;
                     Staff2DB.Text = staff2;
                     Staff3DB.Text = staff3;
-                    Staff4DB.Text = staff4;     
+                    Staff4DB.Text = staff4;
+                    
+                    //refresh data grid
+                    RefreshDataGridView();
+
                 }
             }
-
+            if (Edit_EventInfo.Text != "Add Event")
+            {
+                Edit_EventInfo.Text = "Save";
+                PickDateBT.Visible = true;
+            }
 
         }
 
@@ -701,7 +778,7 @@ namespace ADET_sample
             using (MySqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
-                if (Edit_EventInfo.Text == "Edit")
+                if (Edit_EventInfo.Text == "Save")
                 {
                     MySqlCommand command = new MySqlCommand("UPDATE matcha_em_sys.event SET Venue = @Venue, Event_Time = @Time, " +
                         "Client_Name = @Client, Event_Date = @Date, Contact = @Contact, Package = @Package, Payment_Status = @PaymentStatus, " +
@@ -757,7 +834,8 @@ namespace ADET_sample
     }
         public void RefreshDataGridView()
         {
-            eventsTab.FillEventsDataGridView(DateTime.Today);
+            DateTime selectedDate = DateTime.ParseExact(this.initialEventDate, "yyyy-MM-dd", CultureInfo.InvariantCulture); ;
+            eventsTab.FillEventsDataGridView(selectedDate);
         }
 
         private void PickDateBT_Click(object sender, EventArgs e)

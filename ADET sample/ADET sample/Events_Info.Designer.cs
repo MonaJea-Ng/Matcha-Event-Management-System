@@ -72,6 +72,8 @@ namespace ADET_sample
             UnderlinedVenue = new TextBox();
             EventInfoLabel = new Label();
             ExitButton = new ADETADET_sample.RBButton();
+            UnderlineEventName = new TextBox();
+            UnderlineEventType = new TextBox();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -126,6 +128,8 @@ namespace ADET_sample
             panel3.Controls.Add(UnderlinedContact);
             panel3.Controls.Add(UnderlinedTime);
             panel3.Controls.Add(UnderlinedVenue);
+            panel3.Controls.Add(UnderlineEventName);
+            panel3.Controls.Add(UnderlineEventType);
             panel3.Location = new Point(8, 54);
             panel3.Margin = new Padding(2, 3, 2, 3);
             panel3.Name = "panel3";
@@ -157,7 +161,7 @@ namespace ADET_sample
             // 
             // EventInfoDatePicker
             // 
-            EventInfoDatePicker.Location = new Point(33, 117);
+            EventInfoDatePicker.Location = new Point(36, 117);
             EventInfoDatePicker.Name = "EventInfoDatePicker";
             EventInfoDatePicker.TabIndex = 39;
             EventInfoDatePicker.Visible = false;
@@ -268,10 +272,10 @@ namespace ADET_sample
             // 
             RequestTB.BackColor = Color.FromArgb(223, 232, 215);
             RequestTB.BorderStyle = BorderStyle.None;
-            RequestTB.Location = new Point(41, 406);
+            RequestTB.Location = new Point(36, 402);
             RequestTB.Multiline = true;
             RequestTB.Name = "RequestTB";
-            RequestTB.Size = new Size(726, 62);
+            RequestTB.Size = new Size(756, 79);
             RequestTB.TabIndex = 0;
             RequestTB.TextChanged += RequestTB_TextChanged;
             // 
@@ -329,7 +333,7 @@ namespace ADET_sample
             // 
             ClientTB.BackColor = Color.FromArgb(223, 232, 215);
             ClientTB.BorderStyle = BorderStyle.None;
-            ClientTB.Location = new Point(93, 50);
+            ClientTB.Location = new Point(89, 55);
             ClientTB.Name = "ClientTB";
             ClientTB.Size = new Size(229, 24);
             ClientTB.TabIndex = 19;
@@ -426,7 +430,7 @@ namespace ADET_sample
             // ClientLabel
             // 
             ClientLabel.AutoSize = true;
-            ClientLabel.Location = new Point(33, 51);
+            ClientLabel.Location = new Point(33, 55);
             ClientLabel.Name = "ClientLabel";
             ClientLabel.Size = new Size(60, 25);
             ClientLabel.TabIndex = 8;
@@ -511,8 +515,9 @@ namespace ADET_sample
             // 
             UnderlineClient.BackColor = Color.FromArgb(223, 232, 215);
             UnderlineClient.BorderStyle = BorderStyle.None;
-            UnderlineClient.Location = new Point(88, 52);
+            UnderlineClient.Location = new Point(88, 57);
             UnderlineClient.Name = "UnderlineClient";
+            UnderlineClient.ReadOnly = true;
             UnderlineClient.ShortcutsEnabled = false;
             UnderlineClient.Size = new Size(229, 24);
             UnderlineClient.TabIndex = 43;
@@ -535,6 +540,7 @@ namespace ADET_sample
             UnderlinedContact.BorderStyle = BorderStyle.None;
             UnderlinedContact.Location = new Point(306, 119);
             UnderlinedContact.Name = "UnderlinedContact";
+            UnderlinedContact.ReadOnly = true;
             UnderlinedContact.Size = new Size(229, 24);
             UnderlinedContact.TabIndex = 45;
             UnderlinedContact.TabStop = false;
@@ -546,6 +552,7 @@ namespace ADET_sample
             UnderlinedTime.BorderStyle = BorderStyle.None;
             UnderlinedTime.Location = new Point(39, 208);
             UnderlinedTime.Name = "UnderlinedTime";
+            UnderlinedTime.ReadOnly = true;
             UnderlinedTime.Size = new Size(229, 24);
             UnderlinedTime.TabIndex = 46;
             UnderlinedTime.TabStop = false;
@@ -557,6 +564,7 @@ namespace ADET_sample
             UnderlinedVenue.BorderStyle = BorderStyle.None;
             UnderlinedVenue.Location = new Point(38, 305);
             UnderlinedVenue.Name = "UnderlinedVenue";
+            UnderlinedVenue.ReadOnly = true;
             UnderlinedVenue.Size = new Size(229, 24);
             UnderlinedVenue.TabIndex = 47;
             UnderlinedVenue.TabStop = false;
@@ -593,6 +601,30 @@ namespace ADET_sample
             ExitButton.TextColor = Color.White;
             ExitButton.UseVisualStyleBackColor = false;
             ExitButton.Click += ExitButton_Click;
+            // 
+            // UnderlineEventName
+            // 
+            UnderlineEventName.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineEventName.BorderStyle = BorderStyle.None;
+            UnderlineEventName.Location = new Point(36, 28);
+            UnderlineEventName.Name = "UnderlineEventName";
+            UnderlineEventName.ReadOnly = true;
+            UnderlineEventName.Size = new Size(229, 24);
+            UnderlineEventName.TabIndex = 48;
+            UnderlineEventName.TabStop = false;
+            UnderlineEventName.Text = "_____________________________";
+            // 
+            // UnderlineEventType
+            // 
+            UnderlineEventType.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineEventType.BorderStyle = BorderStyle.None;
+            UnderlineEventType.Location = new Point(298, 28);
+            UnderlineEventType.Name = "UnderlineEventType";
+            UnderlineEventType.ReadOnly = true;
+            UnderlineEventType.Size = new Size(229, 24);
+            UnderlineEventType.TabIndex = 49;
+            UnderlineEventType.TabStop = false;
+            UnderlineEventType.Text = "_____________________________";
             // 
             // Events_Info
             // 
@@ -655,5 +687,7 @@ namespace ADET_sample
         private TextBox UnderlinedContact;
         private TextBox UnderlinedTime;
         private TextBox UnderlinedVenue;
+        private TextBox UnderlineEventName;
+        private TextBox UnderlineEventType;
     }
 }

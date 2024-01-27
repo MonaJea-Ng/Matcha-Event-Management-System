@@ -12,6 +12,8 @@ namespace ADET_sample
         public Events_tab()
         {
             InitializeComponent();
+            DateTime today = DateTime.Today;
+            FillEventsDataGridView(today);
         }
 
         private void AddEventButton_Click(object sender, EventArgs e)
@@ -30,12 +32,8 @@ namespace ADET_sample
 
         private void Events_tab_Load(object sender, EventArgs e)
         {
-            DateTime today = DateTime.Today;
-            FillEventsDataGridView(today);
-
-            
-
-
+            //DateTime today = DateTime.Today;
+            //FillEventsDataGridView(today);
         }
 
         private void UpcomingEventsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -83,6 +81,9 @@ namespace ADET_sample
                 DataTable EventTable = new DataTable();
                 Events.Fill(EventTable);
                 UpcomingEventsData.DataSource = EventTable;
+
+                //static data events table
+                UpcomingEventsData.ReadOnly = true;
 
                 //Changing name to appear sa header
                 UpcomingEventsData.Columns["Event_Name"].HeaderText = "Name";
