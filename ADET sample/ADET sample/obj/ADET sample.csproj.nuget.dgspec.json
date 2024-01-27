@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\monik\\source\\repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj": {}
+    "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\monik\\source\\repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj": {
+    "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\monik\\source\\repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
+        "projectUniqueName": "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
         "projectName": "ADET sample",
-        "projectPath": "C:\\Users\\monik\\source\\repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
-        "packagesPath": "C:\\Users\\monik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\monik\\source\\repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\obj\\",
+        "projectPath": "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
+        "packagesPath": "C:\\Users\\Monica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\monik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Monica\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +45,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "MaterialSkin.2": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.3.0, )"
@@ -69,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

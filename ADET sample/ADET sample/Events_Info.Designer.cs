@@ -1,4 +1,5 @@
 ﻿using Org.BouncyCastle.Tls;
+using System.Windows.Forms;
 
 namespace ADET_sample
 {
@@ -30,8 +31,12 @@ namespace ADET_sample
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Events_Info));
             process1 = new System.Diagnostics.Process();
             panel3 = new Panel();
+            EventTypeTB = new TextBox();
+            EventNameTB = new TextBox();
+            EventInfoDatePicker = new MonthCalendar();
             PackageDB = new ComboBox();
             Staff4DB = new ComboBox();
             Staff3DB = new ComboBox();
@@ -59,6 +64,14 @@ namespace ADET_sample
             EventNameLabel = new Label();
             Delete_EventInfo = new ADETADET_sample.RBButton();
             Edit_EventInfo = new ADETADET_sample.RBButton();
+            PickDateBT = new ADETADET_sample.RBButton();
+            UnderlineClient = new TextBox();
+            UnderlineDate = new TextBox();
+            UnderlinedContact = new TextBox();
+            UnderlinedTime = new TextBox();
+            UnderlinedVenue = new TextBox();
+            UnderlineEventName = new TextBox();
+            UnderlineEventType = new TextBox();
             EventInfoLabel = new Label();
             ExitButton = new ADETADET_sample.RBButton();
             panel3.SuspendLayout();
@@ -79,6 +92,9 @@ namespace ADET_sample
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(EventTypeTB);
+            panel3.Controls.Add(EventNameTB);
+            panel3.Controls.Add(EventInfoDatePicker);
             panel3.Controls.Add(PackageDB);
             panel3.Controls.Add(Staff4DB);
             panel3.Controls.Add(Staff3DB);
@@ -106,12 +122,50 @@ namespace ADET_sample
             panel3.Controls.Add(EventNameLabel);
             panel3.Controls.Add(Delete_EventInfo);
             panel3.Controls.Add(Edit_EventInfo);
+            panel3.Controls.Add(PickDateBT);
+            panel3.Controls.Add(UnderlineClient);
+            panel3.Controls.Add(UnderlineDate);
+            panel3.Controls.Add(UnderlinedContact);
+            panel3.Controls.Add(UnderlinedTime);
+            panel3.Controls.Add(UnderlinedVenue);
+            panel3.Controls.Add(UnderlineEventName);
+            panel3.Controls.Add(UnderlineEventType);
             panel3.Location = new Point(8, 54);
             panel3.Margin = new Padding(2, 3, 2, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(809, 545);
             panel3.TabIndex = 5;
             panel3.Paint += panel3_Paint;
+            // 
+            // EventTypeTB
+            // 
+            EventTypeTB.BackColor = Color.FromArgb(223, 232, 215);
+            EventTypeTB.BorderStyle = BorderStyle.None;
+            EventTypeTB.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            EventTypeTB.Location = new Point(298, 18);
+            EventTypeTB.Name = "EventTypeTB";
+            EventTypeTB.Size = new Size(229, 32);
+            EventTypeTB.TabIndex = 42;
+            EventTypeTB.Text = "Event Type -";
+            // 
+            // EventNameTB
+            // 
+            EventNameTB.BackColor = Color.FromArgb(223, 232, 215);
+            EventNameTB.BorderStyle = BorderStyle.None;
+            EventNameTB.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            EventNameTB.Location = new Point(36, 18);
+            EventNameTB.Name = "EventNameTB";
+            EventNameTB.Size = new Size(229, 32);
+            EventNameTB.TabIndex = 41;
+            EventNameTB.Text = "Event Name -";
+            // 
+            // EventInfoDatePicker
+            // 
+            EventInfoDatePicker.Location = new Point(36, 117);
+            EventInfoDatePicker.Name = "EventInfoDatePicker";
+            EventInfoDatePicker.TabIndex = 39;
+            EventInfoDatePicker.Visible = false;
+            EventInfoDatePicker.DateChanged += EventInfoDatePicker_DateChanged;
             // 
             // PackageDB
             // 
@@ -218,10 +272,10 @@ namespace ADET_sample
             // 
             RequestTB.BackColor = Color.FromArgb(223, 232, 215);
             RequestTB.BorderStyle = BorderStyle.None;
-            RequestTB.Location = new Point(41, 406);
+            RequestTB.Location = new Point(36, 402);
             RequestTB.Multiline = true;
             RequestTB.Name = "RequestTB";
-            RequestTB.Size = new Size(726, 62);
+            RequestTB.Size = new Size(756, 79);
             RequestTB.TabIndex = 0;
             RequestTB.TextChanged += RequestTB_TextChanged;
             // 
@@ -239,7 +293,7 @@ namespace ADET_sample
             // 
             VenueTB.BackColor = Color.FromArgb(223, 232, 215);
             VenueTB.BorderStyle = BorderStyle.None;
-            VenueTB.Location = new Point(41, 306);
+            VenueTB.Location = new Point(39, 303);
             VenueTB.Name = "VenueTB";
             VenueTB.Size = new Size(194, 24);
             VenueTB.TabIndex = 28;
@@ -249,7 +303,7 @@ namespace ADET_sample
             // 
             TimeTB.BackColor = Color.FromArgb(223, 232, 215);
             TimeTB.BorderStyle = BorderStyle.None;
-            TimeTB.Location = new Point(41, 206);
+            TimeTB.Location = new Point(39, 206);
             TimeTB.Name = "TimeTB";
             TimeTB.Size = new Size(194, 24);
             TimeTB.TabIndex = 27;
@@ -279,7 +333,7 @@ namespace ADET_sample
             // 
             ClientTB.BackColor = Color.FromArgb(223, 232, 215);
             ClientTB.BorderStyle = BorderStyle.None;
-            ClientTB.Location = new Point(93, 53);
+            ClientTB.Location = new Point(89, 55);
             ClientTB.Name = "ClientTB";
             ClientTB.Size = new Size(229, 24);
             ClientTB.TabIndex = 19;
@@ -376,7 +430,7 @@ namespace ADET_sample
             // ClientLabel
             // 
             ClientLabel.AutoSize = true;
-            ClientLabel.Location = new Point(33, 51);
+            ClientLabel.Location = new Point(33, 55);
             ClientLabel.Name = "ClientLabel";
             ClientLabel.Size = new Size(60, 25);
             ClientLabel.TabIndex = 8;
@@ -397,8 +451,8 @@ namespace ADET_sample
             // 
             // Delete_EventInfo
             // 
-            Delete_EventInfo.BackColor = Color.FromArgb(46, 60, 24);
-            Delete_EventInfo.BackgroundColor = Color.FromArgb(46, 60, 24);
+            Delete_EventInfo.BackColor = Color.Firebrick;
+            Delete_EventInfo.BackgroundColor = Color.Firebrick;
             Delete_EventInfo.BorderColor = Color.PaleVioletRed;
             Delete_EventInfo.BorderRadius = 8;
             Delete_EventInfo.BorderSize = 0;
@@ -434,6 +488,111 @@ namespace ADET_sample
             Edit_EventInfo.TextColor = Color.White;
             Edit_EventInfo.UseVisualStyleBackColor = false;
             Edit_EventInfo.Click += Edit_EventInfo_Click;
+            // 
+            // PickDateBT
+            // 
+            PickDateBT.BackColor = Color.FromArgb(223, 232, 215);
+            PickDateBT.BackgroundColor = Color.FromArgb(223, 232, 215);
+            PickDateBT.BackgroundImage = (Image)resources.GetObject("PickDateBT.BackgroundImage");
+            PickDateBT.BackgroundImageLayout = ImageLayout.Stretch;
+            PickDateBT.BorderColor = Color.PaleVioletRed;
+            PickDateBT.BorderRadius = 8;
+            PickDateBT.BorderSize = 0;
+            PickDateBT.FlatAppearance.BorderSize = 0;
+            PickDateBT.FlatStyle = FlatStyle.Flat;
+            PickDateBT.ForeColor = Color.Black;
+            PickDateBT.Location = new Point(239, 113);
+            PickDateBT.Margin = new Padding(2, 3, 2, 3);
+            PickDateBT.Name = "PickDateBT";
+            PickDateBT.Size = new Size(32, 33);
+            PickDateBT.TabIndex = 40;
+            PickDateBT.TextColor = Color.Black;
+            PickDateBT.UseVisualStyleBackColor = false;
+            PickDateBT.Visible = false;
+            PickDateBT.Click += PickDateBT_Click;
+            // 
+            // UnderlineClient
+            // 
+            UnderlineClient.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineClient.BorderStyle = BorderStyle.None;
+            UnderlineClient.Location = new Point(88, 57);
+            UnderlineClient.Name = "UnderlineClient";
+            UnderlineClient.ReadOnly = true;
+            UnderlineClient.ShortcutsEnabled = false;
+            UnderlineClient.Size = new Size(229, 24);
+            UnderlineClient.TabIndex = 43;
+            UnderlineClient.TabStop = false;
+            UnderlineClient.Text = "_____________________________";
+            // 
+            // UnderlineDate
+            // 
+            UnderlineDate.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineDate.BorderStyle = BorderStyle.None;
+            UnderlineDate.Location = new Point(38, 119);
+            UnderlineDate.Name = "UnderlineDate";
+            UnderlineDate.Size = new Size(229, 24);
+            UnderlineDate.TabIndex = 44;
+            UnderlineDate.Text = "_____________________________";
+            // 
+            // UnderlinedContact
+            // 
+            UnderlinedContact.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlinedContact.BorderStyle = BorderStyle.None;
+            UnderlinedContact.Location = new Point(306, 119);
+            UnderlinedContact.Name = "UnderlinedContact";
+            UnderlinedContact.ReadOnly = true;
+            UnderlinedContact.Size = new Size(229, 24);
+            UnderlinedContact.TabIndex = 45;
+            UnderlinedContact.TabStop = false;
+            UnderlinedContact.Text = "_____________________________";
+            // 
+            // UnderlinedTime
+            // 
+            UnderlinedTime.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlinedTime.BorderStyle = BorderStyle.None;
+            UnderlinedTime.Location = new Point(39, 208);
+            UnderlinedTime.Name = "UnderlinedTime";
+            UnderlinedTime.ReadOnly = true;
+            UnderlinedTime.Size = new Size(229, 24);
+            UnderlinedTime.TabIndex = 46;
+            UnderlinedTime.TabStop = false;
+            UnderlinedTime.Text = "_____________________________";
+            // 
+            // UnderlinedVenue
+            // 
+            UnderlinedVenue.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlinedVenue.BorderStyle = BorderStyle.None;
+            UnderlinedVenue.Location = new Point(38, 305);
+            UnderlinedVenue.Name = "UnderlinedVenue";
+            UnderlinedVenue.ReadOnly = true;
+            UnderlinedVenue.Size = new Size(229, 24);
+            UnderlinedVenue.TabIndex = 47;
+            UnderlinedVenue.TabStop = false;
+            UnderlinedVenue.Text = "_____________________________";
+            // 
+            // UnderlineEventName
+            // 
+            UnderlineEventName.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineEventName.BorderStyle = BorderStyle.None;
+            UnderlineEventName.Location = new Point(36, 28);
+            UnderlineEventName.Name = "UnderlineEventName";
+            UnderlineEventName.ReadOnly = true;
+            UnderlineEventName.Size = new Size(229, 24);
+            UnderlineEventName.TabIndex = 48;
+            UnderlineEventName.TabStop = false;
+            UnderlineEventName.Text = "_____________________________";
+            // 
+            // UnderlineEventType
+            // 
+            UnderlineEventType.BackColor = Color.FromArgb(223, 232, 215);
+            UnderlineEventType.BorderStyle = BorderStyle.None;
+            UnderlineEventType.Location = new Point(298, 28);
+            UnderlineEventType.Name = "UnderlineEventType";
+            UnderlineEventType.ReadOnly = true;
+            UnderlineEventType.Size = new Size(229, 24);
+            UnderlineEventType.TabIndex = 49;
+            UnderlineEventType.TabStop = false;
+            UnderlineEventType.Text = "_____________________________";
             // 
             // EventInfoLabel
             // 
@@ -519,6 +678,16 @@ namespace ADET_sample
         private ComboBox Staff1DB;
         private ComboBox AddOnsDB;
         private ComboBox PackageDB;
-        
+        private MonthCalendar EventInfoDatePicker;
+        private ADETADET_sample.RBButton PickDateBT;
+        private TextBox EventNameTB;
+        private TextBox EventTypeTB;
+        private TextBox UnderlineDate;
+        private TextBox UnderlineClient;
+        private TextBox UnderlinedContact;
+        private TextBox UnderlinedTime;
+        private TextBox UnderlinedVenue;
+        private TextBox UnderlineEventName;
+        private TextBox UnderlineEventType;
     }
 }

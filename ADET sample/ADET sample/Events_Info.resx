@@ -141,4 +141,22 @@
   <metadata name="PaymentStatusDB.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PickDateBT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjRlTDBkSmNzOjI1LGo6NDYwMDg0MzcyMjI3
+        NDAxNDcwMix0OjI0MDEyNjEzL5AupAAAAjtJREFUWEftmCFILEEYxw8xGAQFDYKCD55BUNAgWAQFhWd4
+        0aRBwWhQUDAaDSIGg0FBwWgwGF54wWB4wWAwGgwGo8FgMOj/93nLzA576u3erXJvf/Bj75udmf3udmZn
+        9koFBY6m8jErteonxpR8ltMWpaddPspNi2rIgnwpH7PwQ9LPoUUpGZC7kk4iLyQdc/TLq/VE0s+NVxa5
+        LlvkuwxJbgGdfIVn8l22JRVXJLcjck1SztEvr9YxST/8kn55v7yUnOuSFTmQVKKRTx5jcENy7qdFFaiU
+        4KC8liMWpadVMo4XLYqTKcE8qCrBf/I8Z2/lpxO8kzTI0wf56QS//S1umASZlb9k0gowKpMuxno8KZst
+        ctQlwX1J/S2LHDx4KWdVCpNnteDckkWOuiTIRag/b5GD1YCJdmVRHL4MO6PfFjn+zzFYSxo7wbaySfSW
+        jyEdklkewuztfvsYI3WCXOReMiN5RPiwdaf+qkUO2lOfiRI+TtjJ0GbOIkfqBEmKZYgLdlLgESVI5z60
+        f5J8sTDBY0mbcOZnusUkFiYHXJxnXhI9MvzFgTZ9bx9jZEowD4oEs5I6QdZSliy2/OFjg607kycc8IxX
+        Xi3Z3oeQCG3YMPikTpCLsXYiA99nT1J/xyLHsKScRMLNwh/JuWWLHJluMS9LvDKGMEtnZNIDeUKSaAhf
+        mDbh46cxxiB/eVBp3KJ8OZVcu9LSabBHoxImvdjUy+iFiYn44d9zs/Kv5NUzT49kOAkLCr6YUukV/E0x
+        lnSIh8YAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

@@ -40,7 +40,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(15, 12);
+            label1.Location = new Point(-2, 15);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(333, 43);
@@ -59,10 +59,10 @@
             AddEventButton.FlatStyle = FlatStyle.Flat;
             AddEventButton.ForeColor = Color.White;
             AddEventButton.ImageAlign = ContentAlignment.BottomCenter;
-            AddEventButton.Location = new Point(15, 754);
+            AddEventButton.Location = new Point(4, 754);
             AddEventButton.Margin = new Padding(2, 3, 2, 3);
             AddEventButton.Name = "AddEventButton";
-            AddEventButton.Size = new Size(1198, 39);
+            AddEventButton.Size = new Size(1209, 39);
             AddEventButton.TabIndex = 9;
             AddEventButton.Text = "Add Event";
             AddEventButton.TextColor = Color.White;
@@ -76,20 +76,21 @@
             UpcomingEventsData.AllowUserToResizeColumns = false;
             UpcomingEventsData.AllowUserToResizeRows = false;
             UpcomingEventsData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            UpcomingEventsData.BackgroundColor = Color.FromArgb(106, 115, 93);
+            UpcomingEventsData.BackgroundColor = Color.FromArgb(76, 88, 57);
             UpcomingEventsData.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            UpcomingEventsData.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(28, 37, 14);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(46, 60, 24);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 13F);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(28, 37, 14);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(46, 60, 24);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             UpcomingEventsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             UpcomingEventsData.ColumnHeadersHeight = 60;
             UpcomingEventsData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(46, 60, 24);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(76, 88, 57);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(95, 122, 86);
@@ -98,7 +99,7 @@
             UpcomingEventsData.DefaultCellStyle = dataGridViewCellStyle2;
             UpcomingEventsData.EnableHeadersVisualStyles = false;
             UpcomingEventsData.GridColor = SystemColors.InactiveBorder;
-            UpcomingEventsData.Location = new Point(24, 61);
+            UpcomingEventsData.Location = new Point(4, 61);
             UpcomingEventsData.MultiSelect = false;
             UpcomingEventsData.Name = "UpcomingEventsData";
             UpcomingEventsData.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -108,7 +109,7 @@
             UpcomingEventsData.RowTemplate.Height = 50;
             UpcomingEventsData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             UpcomingEventsData.ShowEditingIcon = false;
-            UpcomingEventsData.Size = new Size(1183, 690);
+            UpcomingEventsData.Size = new Size(1209, 690);
             UpcomingEventsData.TabIndex = 10;
             UpcomingEventsData.CellContentClick += UpcomingEventsData_CellContentClick;
             // 

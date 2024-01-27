@@ -72,6 +72,18 @@
           }
         }
       },
+      "MaterialSkin.2/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/MaterialSkin.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/MaterialSkin.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -643,6 +655,23 @@
         "lib/netstandard2.0/K4os.Hash.xxHash.xml",
         "lib/netstandard2.1/K4os.Hash.xxHash.dll",
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
+      ]
+    },
+    "MaterialSkin.2/2.3.1": {
+      "sha512": "w2vFxLNk4InCDU7pXDfBqPfv55HhBtuu8HRfEqQpeS3sNTS1pUzDs/hS0b5JW2/tKvt+P1of9OINP8a9omWDBg==",
+      "type": "package",
+      "path": "materialskin.2/2.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net45/MaterialSkin.dll",
+        "lib/net461/MaterialSkin.dll",
+        "lib/net48/MaterialSkin.dll",
+        "lib/net5.0-windows7.0/MaterialSkin.dll",
+        "materialskin.2.2.3.1.nupkg.sha512",
+        "materialskin.2.nuspec",
+        "nugetIcon.png"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -1782,27 +1811,28 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "MaterialSkin.2 >= 2.3.1",
       "MySql.Data >= 8.3.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\monik\\.nuget\\packages\\": {},
+    "C:\\Users\\Monica\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\monik\\Source\\Repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
+      "projectUniqueName": "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
       "projectName": "ADET sample",
-      "projectPath": "C:\\Users\\monik\\Source\\Repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
-      "packagesPath": "C:\\Users\\monik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\monik\\Source\\Repos\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\obj\\",
+      "projectPath": "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
+      "packagesPath": "C:\\Users\\Monica\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Monica\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\monik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Monica\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1830,6 +1860,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "MaterialSkin.2": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          },
           "MySql.Data": {
             "target": "Package",
             "version": "[8.3.0, )"
@@ -1854,7 +1888,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

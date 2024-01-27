@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
     <PackageReference Include="MySql.Data" Version="8.3.0" />
   </ItemGroup>
 
@@ -26,10 +27,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
 
 </Project>
