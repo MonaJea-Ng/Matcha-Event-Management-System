@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADET sample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0ca14fc1d97ff683d43d64535ddec6693937105")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADET sample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADET sample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -26,12 +26,10 @@ namespace ADET_sample
 
         private void Employees_List_Datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Check if the clicked cell is in the "Edit" image column
             if (e.RowIndex >= 0 && e.ColumnIndex == Employees_List_Datagrid.Columns["edit_button_image"].Index)
             {
-                // Open the pop-up window for editing
-                Edit_Employee_Row editForm = new Edit_Employee_Row();
-                // Pass any necessary data to the pop-up form
+                DataGridViewRow selectedRow = Employees_List_Datagrid.Rows[e.RowIndex];
+                Edit_Employee_Row editForm = new Edit_Employee_Row(selectedRow, this);
                 editForm.ShowDialog();
             }
         }
@@ -60,5 +58,10 @@ namespace ADET_sample
             }
         }
 
+        private void Add_New_Emp_Btn_Click(object sender, EventArgs e)
+        {
+            Add_New_Employee new_form = new Add_New_Employee();
+            new_form.ShowDialog();
+        }
     }
 }

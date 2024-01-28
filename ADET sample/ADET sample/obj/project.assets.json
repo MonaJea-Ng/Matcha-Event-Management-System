@@ -1792,11 +1792,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\T14\\Desktop\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
+      "projectUniqueName": "C:\\Users\\T14\\Desktop\\For Matcha\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
       "projectName": "ADET sample",
-      "projectPath": "C:\\Users\\T14\\Desktop\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
+      "projectPath": "C:\\Users\\T14\\Desktop\\For Matcha\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\ADET sample.csproj",
       "packagesPath": "C:\\Users\\T14\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\T14\\Desktop\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\obj\\",
+      "outputPath": "C:\\Users\\T14\\Desktop\\For Matcha\\Matcha-Event-Management-System\\ADET sample\\ADET sample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
