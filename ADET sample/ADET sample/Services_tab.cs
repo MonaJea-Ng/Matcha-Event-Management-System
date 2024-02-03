@@ -70,7 +70,12 @@ namespace ADET_sample
 
         private void SavePackageBtn_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void SaveAddonButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

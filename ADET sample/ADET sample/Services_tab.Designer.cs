@@ -32,8 +32,6 @@
             label_Addons = new Label();
             Packages_List_DataGrid = new DataGridView();
             Addons_List_DataGrid = new DataGridView();
-            SaveAddonButton = new ADETADET_sample.RBButton();
-            SavePackageBtn = new ADETADET_sample.RBButton();
             ((System.ComponentModel.ISupportInitialize)Packages_List_DataGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Addons_List_DataGrid).BeginInit();
             SuspendLayout();
@@ -89,55 +87,12 @@
             Addons_List_DataGrid.Size = new Size(876, 224);
             Addons_List_DataGrid.TabIndex = 6;
             // 
-            // SaveAddonButton
-            // 
-            SaveAddonButton.BackColor = Color.FromArgb(46, 60, 24);
-            SaveAddonButton.BackgroundColor = Color.FromArgb(46, 60, 24);
-            SaveAddonButton.BorderColor = Color.PaleVioletRed;
-            SaveAddonButton.BorderRadius = 8;
-            SaveAddonButton.BorderSize = 0;
-            SaveAddonButton.FlatAppearance.BorderSize = 0;
-            SaveAddonButton.FlatStyle = FlatStyle.Flat;
-            SaveAddonButton.ForeColor = Color.White;
-            SaveAddonButton.ImageAlign = ContentAlignment.BottomCenter;
-            SaveAddonButton.Location = new Point(599, 313);
-            SaveAddonButton.Margin = new Padding(2);
-            SaveAddonButton.Name = "SaveAddonButton";
-            SaveAddonButton.Size = new Size(313, 32);
-            SaveAddonButton.TabIndex = 11;
-            SaveAddonButton.Text = "Save Addon Changes";
-            SaveAddonButton.TextColor = Color.White;
-            SaveAddonButton.UseVisualStyleBackColor = false;
-            // 
-            // SavePackageBtn
-            // 
-            SavePackageBtn.BackColor = Color.FromArgb(46, 60, 24);
-            SavePackageBtn.BackgroundColor = Color.FromArgb(46, 60, 24);
-            SavePackageBtn.BorderColor = Color.PaleVioletRed;
-            SavePackageBtn.BorderRadius = 8;
-            SavePackageBtn.BorderSize = 0;
-            SavePackageBtn.FlatAppearance.BorderSize = 0;
-            SavePackageBtn.FlatStyle = FlatStyle.Flat;
-            SavePackageBtn.ForeColor = Color.White;
-            SavePackageBtn.ImageAlign = ContentAlignment.BottomCenter;
-            SavePackageBtn.Location = new Point(599, 28);
-            SavePackageBtn.Margin = new Padding(2);
-            SavePackageBtn.Name = "SavePackageBtn";
-            SavePackageBtn.Size = new Size(313, 32);
-            SavePackageBtn.TabIndex = 12;
-            SavePackageBtn.Text = "Save Package Changes";
-            SavePackageBtn.TextColor = Color.White;
-            SavePackageBtn.UseVisualStyleBackColor = false;
-            SavePackageBtn.Click += SavePackageBtn_Click;
-            // 
             // Services_tab
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(223, 232, 215);
             ClientSize = new Size(965, 605);
-            Controls.Add(SavePackageBtn);
-            Controls.Add(SaveAddonButton);
             Controls.Add(Addons_List_DataGrid);
             Controls.Add(Packages_List_DataGrid);
             Controls.Add(label_Addons);
@@ -158,7 +113,5 @@
         private Label label_Addons;
         private DataGridView Packages_List_DataGrid;
         private DataGridView Addons_List_DataGrid;
-        private ADETADET_sample.RBButton SaveAddonButton;
-        private ADETADET_sample.RBButton SavePackageBtn;
     }
 }
