@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Add_New_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Custom\RB.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Edit_Employee_Row.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Employees_tab.cs">
       <SubType>Form</SubType>

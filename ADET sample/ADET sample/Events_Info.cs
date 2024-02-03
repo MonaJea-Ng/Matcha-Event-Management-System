@@ -56,9 +56,9 @@ namespace ADET_sample
             using (MySqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
-                MySqlCommand packageOptions = new MySqlCommand("SELECT Package_Type FROM matcha_em_sys.packages;", con);//package
-                MySqlCommand addOnsOptions = new MySqlCommand("SELECT AddOn FROM matcha_em_sys.addons;", con);//addons
-                MySqlCommand staffOptions = new MySqlCommand("SELECT employee_id FROM matcha_em_sys.employees;", con);//staff options
+                MySqlCommand packageOptions = new MySqlCommand("SELECT Package_Type FROM matcha.packages;", con);//package
+                MySqlCommand addOnsOptions = new MySqlCommand("SELECT AddOn FROM matcha.addons;", con);//addons
+                MySqlCommand staffOptions = new MySqlCommand("SELECT employee_id FROM matcha.employees;", con);//staff options
 
                 using (MySqlDataReader packagereader = packageOptions.ExecuteReader())
                 {
@@ -644,7 +644,7 @@ namespace ADET_sample
                     using (MySqlConnection con = DatabaseConnection.GetConnection())
                     {
                         con.Open();
-                        MySqlCommand command = new MySqlCommand("DELETE FROM matcha_em_sys.event WHERE " +
+                        MySqlCommand command = new MySqlCommand("DELETE FROM matcha.event WHERE " +
                             "Event_Name = @EventName AND Event_Date = @EventDate", con);
 
                         string deleteEventName = this.initialEventName;
@@ -780,7 +780,7 @@ namespace ADET_sample
                 con.Open();
                 if (Edit_EventInfo.Text == "Save")
                 {
-                    MySqlCommand command = new MySqlCommand("UPDATE matcha_em_sys.event SET Venue = @Venue, Event_Time = @Time, " +
+                    MySqlCommand command = new MySqlCommand("UPDATE matcha.event SET Venue = @Venue, Event_Time = @Time, " +
                         "Client_Name = @Client, Event_Date = @Date, Contact = @Contact, Package = @Package, Payment_Status = @PaymentStatus, " +
                         "Staff_1 = @Staff1, Staff_2 = @Staff2, Staff_3 = @Staff3, Staff_4 = @Staff4, Add_Ons = @AddOns, " +
                         "Other_Request = @Request WHERE Event_Name = @EventName AND Event_Type =@EventType", con);
@@ -806,7 +806,7 @@ namespace ADET_sample
                 }
                 else if (Edit_EventInfo.Text == "Add Event")
                 {
-                    MySqlCommand command = new MySqlCommand("INSERT INTO matcha_em_sys.event(Event_Name, Event_Type, Venue, " +
+                    MySqlCommand command = new MySqlCommand("INSERT INTO matcha.event(Event_Name, Event_Type, Venue, " +
                         "Event_Time, Client_Name, Event_Date, Package, Add_Ons, Payment_Status, Staff_1, Staff_2, " +
                         "Staff_3, Staff_4, Contact, Other_Request) VALUES (@EventName, @EventType, @Venue, @Time, " +
                         "@Client, @Date, @Package, @AddOns, @PaymentStatus, @Staff1, @Staff2, @Staff3, @Staff4, " +

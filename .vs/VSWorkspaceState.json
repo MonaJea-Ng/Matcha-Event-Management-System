@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ADET sample",
+    "\\ADET sample\\ADET sample"
   ],
-  "SelectedNode": "\\ADET sample.sln",
+  "SelectedNode": "\\ADET sample\\ADET sample\\Services_tab.cs",
   "PreviewInSolutionExplorer": false
 }

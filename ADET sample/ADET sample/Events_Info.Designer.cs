@@ -130,10 +130,10 @@ namespace ADET_sample
             panel3.Controls.Add(UnderlinedVenue);
             panel3.Controls.Add(UnderlineEventName);
             panel3.Controls.Add(UnderlineEventType);
-            panel3.Location = new Point(8, 54);
-            panel3.Margin = new Padding(2, 3, 2, 3);
+            panel3.Location = new Point(6, 41);
+            panel3.Margin = new Padding(2, 2, 2, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(809, 545);
+            panel3.Size = new Size(648, 415);
             panel3.TabIndex = 5;
             panel3.Paint += panel3_Paint;
             // 
@@ -142,9 +142,10 @@ namespace ADET_sample
             EventTypeTB.BackColor = Color.FromArgb(223, 232, 215);
             EventTypeTB.BorderStyle = BorderStyle.None;
             EventTypeTB.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            EventTypeTB.Location = new Point(298, 18);
+            EventTypeTB.Location = new Point(238, 14);
+            EventTypeTB.Margin = new Padding(2, 2, 2, 2);
             EventTypeTB.Name = "EventTypeTB";
-            EventTypeTB.Size = new Size(229, 32);
+            EventTypeTB.Size = new Size(183, 22);
             EventTypeTB.TabIndex = 42;
             EventTypeTB.Text = "Event Type -";
             // 
@@ -153,15 +154,17 @@ namespace ADET_sample
             EventNameTB.BackColor = Color.FromArgb(223, 232, 215);
             EventNameTB.BorderStyle = BorderStyle.None;
             EventNameTB.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            EventNameTB.Location = new Point(36, 18);
+            EventNameTB.Location = new Point(29, 14);
+            EventNameTB.Margin = new Padding(2, 2, 2, 2);
             EventNameTB.Name = "EventNameTB";
-            EventNameTB.Size = new Size(229, 32);
+            EventNameTB.Size = new Size(183, 22);
             EventNameTB.TabIndex = 41;
             EventNameTB.Text = "Event Name -";
             // 
             // EventInfoDatePicker
             // 
-            EventInfoDatePicker.Location = new Point(36, 117);
+            EventInfoDatePicker.Location = new Point(29, 89);
+            EventInfoDatePicker.Margin = new Padding(7, 7, 7, 7);
             EventInfoDatePicker.Name = "EventInfoDatePicker";
             EventInfoDatePicker.TabIndex = 39;
             EventInfoDatePicker.Visible = false;
@@ -172,9 +175,10 @@ namespace ADET_sample
             PackageDB.BackColor = Color.FromArgb(223, 232, 215);
             PackageDB.DropDownStyle = ComboBoxStyle.DropDownList;
             PackageDB.FormattingEnabled = true;
-            PackageDB.Location = new Point(301, 210);
+            PackageDB.Location = new Point(241, 160);
+            PackageDB.Margin = new Padding(2, 2, 2, 2);
             PackageDB.Name = "PackageDB";
-            PackageDB.Size = new Size(140, 33);
+            PackageDB.Size = new Size(113, 27);
             PackageDB.Sorted = true;
             PackageDB.TabIndex = 38;
             PackageDB.SelectedIndexChanged += PackageDB_SelectedIndexChanged;
@@ -185,9 +189,10 @@ namespace ADET_sample
             Staff4DB.DropDownStyle = ComboBoxStyle.DropDownList;
             Staff4DB.FormattingEnabled = true;
             Staff4DB.Items.AddRange(new object[] { "None" });
-            Staff4DB.Location = new Point(620, 223);
+            Staff4DB.Location = new Point(496, 169);
+            Staff4DB.Margin = new Padding(2, 2, 2, 2);
             Staff4DB.Name = "Staff4DB";
-            Staff4DB.Size = new Size(140, 33);
+            Staff4DB.Size = new Size(113, 27);
             Staff4DB.Sorted = true;
             Staff4DB.TabIndex = 37;
             Staff4DB.SelectedIndexChanged += Staff4DB_SelectedIndexChanged;
@@ -198,9 +203,10 @@ namespace ADET_sample
             Staff3DB.DropDownStyle = ComboBoxStyle.DropDownList;
             Staff3DB.FormattingEnabled = true;
             Staff3DB.Items.AddRange(new object[] { "None" });
-            Staff3DB.Location = new Point(620, 189);
+            Staff3DB.Location = new Point(496, 144);
+            Staff3DB.Margin = new Padding(2, 2, 2, 2);
             Staff3DB.Name = "Staff3DB";
-            Staff3DB.Size = new Size(140, 33);
+            Staff3DB.Size = new Size(113, 27);
             Staff3DB.Sorted = true;
             Staff3DB.TabIndex = 36;
             Staff3DB.SelectedIndexChanged += Staff3DB_SelectedIndexChanged;
@@ -211,9 +217,10 @@ namespace ADET_sample
             Staff2DB.DropDownStyle = ComboBoxStyle.DropDownList;
             Staff2DB.FormattingEnabled = true;
             Staff2DB.Items.AddRange(new object[] { "None" });
-            Staff2DB.Location = new Point(620, 155);
+            Staff2DB.Location = new Point(496, 118);
+            Staff2DB.Margin = new Padding(2, 2, 2, 2);
             Staff2DB.Name = "Staff2DB";
-            Staff2DB.Size = new Size(140, 33);
+            Staff2DB.Size = new Size(113, 27);
             Staff2DB.Sorted = true;
             Staff2DB.TabIndex = 35;
             Staff2DB.SelectedIndexChanged += Staff2DB_SelectedIndexChanged;
@@ -224,9 +231,10 @@ namespace ADET_sample
             Staff1DB.DropDownStyle = ComboBoxStyle.DropDownList;
             Staff1DB.FormattingEnabled = true;
             Staff1DB.Items.AddRange(new object[] { "None" });
-            Staff1DB.Location = new Point(620, 121);
+            Staff1DB.Location = new Point(496, 92);
+            Staff1DB.Margin = new Padding(2, 2, 2, 2);
             Staff1DB.Name = "Staff1DB";
-            Staff1DB.Size = new Size(140, 33);
+            Staff1DB.Size = new Size(113, 27);
             Staff1DB.Sorted = true;
             Staff1DB.TabIndex = 34;
             Staff1DB.SelectedIndexChanged += Staff1DB_SelectedIndexChanged;
@@ -237,9 +245,10 @@ namespace ADET_sample
             AddOnsDB.DropDownStyle = ComboBoxStyle.DropDownList;
             AddOnsDB.FormattingEnabled = true;
             AddOnsDB.Items.AddRange(new object[] { "None" });
-            AddOnsDB.Location = new Point(301, 303);
+            AddOnsDB.Location = new Point(241, 230);
+            AddOnsDB.Margin = new Padding(2, 2, 2, 2);
             AddOnsDB.Name = "AddOnsDB";
-            AddOnsDB.Size = new Size(140, 33);
+            AddOnsDB.Size = new Size(113, 27);
             AddOnsDB.Sorted = true;
             AddOnsDB.TabIndex = 33;
             AddOnsDB.SelectedIndexChanged += AddOnsDB_SelectedIndexChanged;
@@ -250,9 +259,10 @@ namespace ADET_sample
             PaymentStatusDB.DropDownStyle = ComboBoxStyle.DropDownList;
             PaymentStatusDB.FormattingEnabled = true;
             PaymentStatusDB.Items.AddRange(new object[] { "FULL", "PRTL" });
-            PaymentStatusDB.Location = new Point(620, 306);
+            PaymentStatusDB.Location = new Point(496, 233);
+            PaymentStatusDB.Margin = new Padding(2, 2, 2, 2);
             PaymentStatusDB.Name = "PaymentStatusDB";
-            PaymentStatusDB.Size = new Size(140, 33);
+            PaymentStatusDB.Size = new Size(113, 27);
             PaymentStatusDB.Sorted = true;
             PaymentStatusDB.TabIndex = 32;
             PaymentStatusDB.SelectedIndexChanged += PaymentStatusDB_SelectedIndexChanged;
@@ -260,9 +270,10 @@ namespace ADET_sample
             // AddOnsLabel
             // 
             AddOnsLabel.AutoSize = true;
-            AddOnsLabel.Location = new Point(298, 278);
+            AddOnsLabel.Location = new Point(238, 211);
+            AddOnsLabel.Margin = new Padding(2, 0, 2, 0);
             AddOnsLabel.Name = "AddOnsLabel";
-            AddOnsLabel.Size = new Size(83, 25);
+            AddOnsLabel.Size = new Size(63, 19);
             AddOnsLabel.TabIndex = 31;
             AddOnsLabel.Text = "Add Ons";
             AddOnsLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -272,10 +283,11 @@ namespace ADET_sample
             // 
             RequestTB.BackColor = Color.FromArgb(223, 232, 215);
             RequestTB.BorderStyle = BorderStyle.None;
-            RequestTB.Location = new Point(36, 402);
+            RequestTB.Location = new Point(29, 306);
+            RequestTB.Margin = new Padding(2, 2, 2, 2);
             RequestTB.Multiline = true;
             RequestTB.Name = "RequestTB";
-            RequestTB.Size = new Size(756, 79);
+            RequestTB.Size = new Size(605, 60);
             RequestTB.TabIndex = 0;
             RequestTB.TextChanged += RequestTB_TextChanged;
             // 
@@ -283,9 +295,10 @@ namespace ADET_sample
             // 
             TotalTB.BackColor = Color.FromArgb(223, 232, 215);
             TotalTB.BorderStyle = BorderStyle.None;
-            TotalTB.Location = new Point(306, 306);
+            TotalTB.Location = new Point(245, 233);
+            TotalTB.Margin = new Padding(2, 2, 2, 2);
             TotalTB.Name = "TotalTB";
-            TotalTB.Size = new Size(194, 24);
+            TotalTB.Size = new Size(155, 19);
             TotalTB.TabIndex = 29;
             TotalTB.TextChanged += TotalTB_TextChanged;
             // 
@@ -293,9 +306,10 @@ namespace ADET_sample
             // 
             VenueTB.BackColor = Color.FromArgb(223, 232, 215);
             VenueTB.BorderStyle = BorderStyle.None;
-            VenueTB.Location = new Point(39, 303);
+            VenueTB.Location = new Point(31, 230);
+            VenueTB.Margin = new Padding(2, 2, 2, 2);
             VenueTB.Name = "VenueTB";
-            VenueTB.Size = new Size(194, 24);
+            VenueTB.Size = new Size(155, 19);
             VenueTB.TabIndex = 28;
             VenueTB.TextChanged += VenueTB_TextChanged;
             // 
@@ -303,9 +317,10 @@ namespace ADET_sample
             // 
             TimeTB.BackColor = Color.FromArgb(223, 232, 215);
             TimeTB.BorderStyle = BorderStyle.None;
-            TimeTB.Location = new Point(39, 206);
+            TimeTB.Location = new Point(31, 157);
+            TimeTB.Margin = new Padding(2, 2, 2, 2);
             TimeTB.Name = "TimeTB";
-            TimeTB.Size = new Size(194, 24);
+            TimeTB.Size = new Size(155, 19);
             TimeTB.TabIndex = 27;
             TimeTB.TextChanged += TimeTB_TextChanged;
             // 
@@ -313,9 +328,10 @@ namespace ADET_sample
             // 
             ContactTB.BackColor = Color.FromArgb(223, 232, 215);
             ContactTB.BorderStyle = BorderStyle.None;
-            ContactTB.Location = new Point(306, 117);
+            ContactTB.Location = new Point(245, 89);
+            ContactTB.Margin = new Padding(2, 2, 2, 2);
             ContactTB.Name = "ContactTB";
-            ContactTB.Size = new Size(194, 24);
+            ContactTB.Size = new Size(155, 19);
             ContactTB.TabIndex = 21;
             ContactTB.TextChanged += ContactTB_TextChanged;
             // 
@@ -323,9 +339,10 @@ namespace ADET_sample
             // 
             DateTB.BackColor = Color.FromArgb(223, 232, 215);
             DateTB.BorderStyle = BorderStyle.None;
-            DateTB.Location = new Point(39, 117);
+            DateTB.Location = new Point(31, 89);
+            DateTB.Margin = new Padding(2, 2, 2, 2);
             DateTB.Name = "DateTB";
-            DateTB.Size = new Size(185, 24);
+            DateTB.Size = new Size(148, 19);
             DateTB.TabIndex = 20;
             DateTB.TextChanged += DateTB_TextChanged;
             // 
@@ -333,18 +350,20 @@ namespace ADET_sample
             // 
             ClientTB.BackColor = Color.FromArgb(223, 232, 215);
             ClientTB.BorderStyle = BorderStyle.None;
-            ClientTB.Location = new Point(89, 55);
+            ClientTB.Location = new Point(71, 42);
+            ClientTB.Margin = new Padding(2, 2, 2, 2);
             ClientTB.Name = "ClientTB";
-            ClientTB.Size = new Size(229, 24);
+            ClientTB.Size = new Size(183, 19);
             ClientTB.TabIndex = 19;
             ClientTB.TextChanged += ClientTB_TextChanged;
             // 
             // TimeLabel
             // 
             TimeLabel.AutoSize = true;
-            TimeLabel.Location = new Point(33, 182);
+            TimeLabel.Location = new Point(26, 138);
+            TimeLabel.Margin = new Padding(2, 0, 2, 0);
             TimeLabel.Name = "TimeLabel";
-            TimeLabel.Size = new Size(50, 25);
+            TimeLabel.Size = new Size(38, 19);
             TimeLabel.TabIndex = 18;
             TimeLabel.Text = "Time";
             TimeLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -353,9 +372,10 @@ namespace ADET_sample
             // RequestLabel
             // 
             RequestLabel.AutoSize = true;
-            RequestLabel.Location = new Point(33, 376);
+            RequestLabel.Location = new Point(26, 286);
+            RequestLabel.Margin = new Padding(2, 0, 2, 0);
             RequestLabel.Name = "RequestLabel";
-            RequestLabel.Size = new Size(160, 25);
+            RequestLabel.Size = new Size(121, 19);
             RequestLabel.TabIndex = 17;
             RequestLabel.Text = "Specified Requests";
             RequestLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -364,9 +384,10 @@ namespace ADET_sample
             // PaymentStatusLabel
             // 
             PaymentStatusLabel.AutoSize = true;
-            PaymentStatusLabel.Location = new Point(615, 278);
+            PaymentStatusLabel.Location = new Point(492, 211);
+            PaymentStatusLabel.Margin = new Padding(2, 0, 2, 0);
             PaymentStatusLabel.Name = "PaymentStatusLabel";
-            PaymentStatusLabel.Size = new Size(133, 25);
+            PaymentStatusLabel.Size = new Size(105, 19);
             PaymentStatusLabel.TabIndex = 16;
             PaymentStatusLabel.Text = "Payment Status";
             PaymentStatusLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -375,9 +396,10 @@ namespace ADET_sample
             // VenueLabel
             // 
             VenueLabel.AutoSize = true;
-            VenueLabel.Location = new Point(33, 278);
+            VenueLabel.Location = new Point(26, 211);
+            VenueLabel.Margin = new Padding(2, 0, 2, 0);
             VenueLabel.Name = "VenueLabel";
-            VenueLabel.Size = new Size(60, 25);
+            VenueLabel.Size = new Size(47, 19);
             VenueLabel.TabIndex = 14;
             VenueLabel.Text = "Venue";
             VenueLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -386,9 +408,10 @@ namespace ADET_sample
             // PackageLabel
             // 
             PackageLabel.AutoSize = true;
-            PackageLabel.Location = new Point(298, 182);
+            PackageLabel.Location = new Point(238, 138);
+            PackageLabel.Margin = new Padding(2, 0, 2, 0);
             PackageLabel.Name = "PackageLabel";
-            PackageLabel.Size = new Size(76, 25);
+            PackageLabel.Size = new Size(59, 19);
             PackageLabel.TabIndex = 13;
             PackageLabel.Text = "Package";
             PackageLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -397,9 +420,10 @@ namespace ADET_sample
             // StaffsLabel
             // 
             StaffsLabel.AutoSize = true;
-            StaffsLabel.Location = new Point(615, 93);
+            StaffsLabel.Location = new Point(492, 71);
+            StaffsLabel.Margin = new Padding(2, 0, 2, 0);
             StaffsLabel.Name = "StaffsLabel";
-            StaffsLabel.Size = new Size(134, 25);
+            StaffsLabel.Size = new Size(101, 19);
             StaffsLabel.TabIndex = 11;
             StaffsLabel.Text = "Staffs Assigned";
             StaffsLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -408,9 +432,10 @@ namespace ADET_sample
             // ContactLabel
             // 
             ContactLabel.AutoSize = true;
-            ContactLabel.Location = new Point(298, 93);
+            ContactLabel.Location = new Point(238, 71);
+            ContactLabel.Margin = new Padding(2, 0, 2, 0);
             ContactLabel.Name = "ContactLabel";
-            ContactLabel.Size = new Size(131, 25);
+            ContactLabel.Size = new Size(102, 19);
             ContactLabel.TabIndex = 10;
             ContactLabel.Text = "Contact Details";
             ContactLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -419,9 +444,10 @@ namespace ADET_sample
             // DateLabel
             // 
             DateLabel.AutoSize = true;
-            DateLabel.Location = new Point(33, 93);
+            DateLabel.Location = new Point(26, 71);
+            DateLabel.Margin = new Padding(2, 0, 2, 0);
             DateLabel.Name = "DateLabel";
-            DateLabel.Size = new Size(49, 25);
+            DateLabel.Size = new Size(38, 19);
             DateLabel.TabIndex = 9;
             DateLabel.Text = "Date";
             DateLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -430,9 +456,10 @@ namespace ADET_sample
             // ClientLabel
             // 
             ClientLabel.AutoSize = true;
-            ClientLabel.Location = new Point(33, 55);
+            ClientLabel.Location = new Point(26, 42);
+            ClientLabel.Margin = new Padding(2, 0, 2, 0);
             ClientLabel.Name = "ClientLabel";
-            ClientLabel.Size = new Size(60, 25);
+            ClientLabel.Size = new Size(47, 19);
             ClientLabel.TabIndex = 8;
             ClientLabel.Text = "Client:";
             ClientLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -442,9 +469,10 @@ namespace ADET_sample
             // 
             EventNameLabel.AutoSize = true;
             EventNameLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            EventNameLabel.Location = new Point(31, 18);
+            EventNameLabel.Location = new Point(25, 14);
+            EventNameLabel.Margin = new Padding(2, 0, 2, 0);
             EventNameLabel.Name = "EventNameLabel";
-            EventNameLabel.Size = new Size(0, 32);
+            EventNameLabel.Size = new Size(0, 21);
             EventNameLabel.TabIndex = 7;
             EventNameLabel.TextAlign = ContentAlignment.MiddleLeft;
             EventNameLabel.Click += EventNameLabel_Click;
@@ -459,10 +487,10 @@ namespace ADET_sample
             Delete_EventInfo.FlatAppearance.BorderSize = 0;
             Delete_EventInfo.FlatStyle = FlatStyle.Flat;
             Delete_EventInfo.ForeColor = Color.White;
-            Delete_EventInfo.Location = new Point(408, 499);
-            Delete_EventInfo.Margin = new Padding(2, 3, 2, 3);
+            Delete_EventInfo.Location = new Point(326, 379);
+            Delete_EventInfo.Margin = new Padding(2, 2, 2, 2);
             Delete_EventInfo.Name = "Delete_EventInfo";
-            Delete_EventInfo.Size = new Size(398, 39);
+            Delete_EventInfo.Size = new Size(318, 30);
             Delete_EventInfo.TabIndex = 6;
             Delete_EventInfo.Text = "Delete";
             Delete_EventInfo.TextColor = Color.White;
@@ -479,10 +507,10 @@ namespace ADET_sample
             Edit_EventInfo.FlatAppearance.BorderSize = 0;
             Edit_EventInfo.FlatStyle = FlatStyle.Flat;
             Edit_EventInfo.ForeColor = Color.White;
-            Edit_EventInfo.Location = new Point(2, 499);
-            Edit_EventInfo.Margin = new Padding(2, 3, 2, 3);
+            Edit_EventInfo.Location = new Point(2, 379);
+            Edit_EventInfo.Margin = new Padding(2, 2, 2, 2);
             Edit_EventInfo.Name = "Edit_EventInfo";
-            Edit_EventInfo.Size = new Size(398, 39);
+            Edit_EventInfo.Size = new Size(318, 30);
             Edit_EventInfo.TabIndex = 5;
             Edit_EventInfo.Text = "Edit";
             Edit_EventInfo.TextColor = Color.White;
@@ -501,10 +529,10 @@ namespace ADET_sample
             PickDateBT.FlatAppearance.BorderSize = 0;
             PickDateBT.FlatStyle = FlatStyle.Flat;
             PickDateBT.ForeColor = Color.Black;
-            PickDateBT.Location = new Point(239, 113);
-            PickDateBT.Margin = new Padding(2, 3, 2, 3);
+            PickDateBT.Location = new Point(191, 86);
+            PickDateBT.Margin = new Padding(2, 2, 2, 2);
             PickDateBT.Name = "PickDateBT";
-            PickDateBT.Size = new Size(32, 33);
+            PickDateBT.Size = new Size(26, 25);
             PickDateBT.TabIndex = 40;
             PickDateBT.TextColor = Color.Black;
             PickDateBT.UseVisualStyleBackColor = false;
@@ -515,11 +543,12 @@ namespace ADET_sample
             // 
             UnderlineClient.BackColor = Color.FromArgb(223, 232, 215);
             UnderlineClient.BorderStyle = BorderStyle.None;
-            UnderlineClient.Location = new Point(88, 57);
+            UnderlineClient.Location = new Point(70, 43);
+            UnderlineClient.Margin = new Padding(2, 2, 2, 2);
             UnderlineClient.Name = "UnderlineClient";
             UnderlineClient.ReadOnly = true;
             UnderlineClient.ShortcutsEnabled = false;
-            UnderlineClient.Size = new Size(229, 24);
+            UnderlineClient.Size = new Size(183, 19);
             UnderlineClient.TabIndex = 43;
             UnderlineClient.TabStop = false;
             UnderlineClient.Text = "_____________________________";
@@ -528,9 +557,10 @@ namespace ADET_sample
             // 
             UnderlineDate.BackColor = Color.FromArgb(223, 232, 215);
             UnderlineDate.BorderStyle = BorderStyle.None;
-            UnderlineDate.Location = new Point(38, 119);
+            UnderlineDate.Location = new Point(30, 90);
+            UnderlineDate.Margin = new Padding(2, 2, 2, 2);
             UnderlineDate.Name = "UnderlineDate";
-            UnderlineDate.Size = new Size(229, 24);
+            UnderlineDate.Size = new Size(183, 19);
             UnderlineDate.TabIndex = 44;
             UnderlineDate.Text = "_____________________________";
             // 
@@ -538,10 +568,11 @@ namespace ADET_sample
             // 
             UnderlinedContact.BackColor = Color.FromArgb(223, 232, 215);
             UnderlinedContact.BorderStyle = BorderStyle.None;
-            UnderlinedContact.Location = new Point(306, 119);
+            UnderlinedContact.Location = new Point(245, 90);
+            UnderlinedContact.Margin = new Padding(2, 2, 2, 2);
             UnderlinedContact.Name = "UnderlinedContact";
             UnderlinedContact.ReadOnly = true;
-            UnderlinedContact.Size = new Size(229, 24);
+            UnderlinedContact.Size = new Size(183, 19);
             UnderlinedContact.TabIndex = 45;
             UnderlinedContact.TabStop = false;
             UnderlinedContact.Text = "_____________________________";
@@ -550,10 +581,11 @@ namespace ADET_sample
             // 
             UnderlinedTime.BackColor = Color.FromArgb(223, 232, 215);
             UnderlinedTime.BorderStyle = BorderStyle.None;
-            UnderlinedTime.Location = new Point(39, 208);
+            UnderlinedTime.Location = new Point(31, 158);
+            UnderlinedTime.Margin = new Padding(2, 2, 2, 2);
             UnderlinedTime.Name = "UnderlinedTime";
             UnderlinedTime.ReadOnly = true;
-            UnderlinedTime.Size = new Size(229, 24);
+            UnderlinedTime.Size = new Size(183, 19);
             UnderlinedTime.TabIndex = 46;
             UnderlinedTime.TabStop = false;
             UnderlinedTime.Text = "_____________________________";
@@ -562,10 +594,11 @@ namespace ADET_sample
             // 
             UnderlinedVenue.BackColor = Color.FromArgb(223, 232, 215);
             UnderlinedVenue.BorderStyle = BorderStyle.None;
-            UnderlinedVenue.Location = new Point(38, 305);
+            UnderlinedVenue.Location = new Point(30, 232);
+            UnderlinedVenue.Margin = new Padding(2, 2, 2, 2);
             UnderlinedVenue.Name = "UnderlinedVenue";
             UnderlinedVenue.ReadOnly = true;
-            UnderlinedVenue.Size = new Size(229, 24);
+            UnderlinedVenue.Size = new Size(183, 19);
             UnderlinedVenue.TabIndex = 47;
             UnderlinedVenue.TabStop = false;
             UnderlinedVenue.Text = "_____________________________";
@@ -574,10 +607,11 @@ namespace ADET_sample
             // 
             UnderlineEventName.BackColor = Color.FromArgb(223, 232, 215);
             UnderlineEventName.BorderStyle = BorderStyle.None;
-            UnderlineEventName.Location = new Point(36, 28);
+            UnderlineEventName.Location = new Point(29, 21);
+            UnderlineEventName.Margin = new Padding(2, 2, 2, 2);
             UnderlineEventName.Name = "UnderlineEventName";
             UnderlineEventName.ReadOnly = true;
-            UnderlineEventName.Size = new Size(229, 24);
+            UnderlineEventName.Size = new Size(183, 19);
             UnderlineEventName.TabIndex = 48;
             UnderlineEventName.TabStop = false;
             UnderlineEventName.Text = "_____________________________";
@@ -586,10 +620,11 @@ namespace ADET_sample
             // 
             UnderlineEventType.BackColor = Color.FromArgb(223, 232, 215);
             UnderlineEventType.BorderStyle = BorderStyle.None;
-            UnderlineEventType.Location = new Point(298, 28);
+            UnderlineEventType.Location = new Point(238, 21);
+            UnderlineEventType.Margin = new Padding(2, 2, 2, 2);
             UnderlineEventType.Name = "UnderlineEventType";
             UnderlineEventType.ReadOnly = true;
-            UnderlineEventType.Size = new Size(229, 24);
+            UnderlineEventType.Size = new Size(183, 19);
             UnderlineEventType.TabIndex = 49;
             UnderlineEventType.TabStop = false;
             UnderlineEventType.Text = "_____________________________";
@@ -599,9 +634,10 @@ namespace ADET_sample
             EventInfoLabel.AutoSize = true;
             EventInfoLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EventInfoLabel.ImageAlign = ContentAlignment.MiddleLeft;
-            EventInfoLabel.Location = new Point(1, 9);
+            EventInfoLabel.Location = new Point(1, 7);
+            EventInfoLabel.Margin = new Padding(2, 0, 2, 0);
             EventInfoLabel.Name = "EventInfoLabel";
-            EventInfoLabel.Size = new Size(291, 45);
+            EventInfoLabel.Size = new Size(200, 30);
             EventInfoLabel.TabIndex = 8;
             EventInfoLabel.Text = "Event Information";
             EventInfoLabel.Click += EventInfoLabel_Click;
@@ -616,10 +652,10 @@ namespace ADET_sample
             ExitButton.FlatAppearance.BorderSize = 0;
             ExitButton.FlatStyle = FlatStyle.Flat;
             ExitButton.ForeColor = Color.White;
-            ExitButton.Location = new Point(9, 605);
-            ExitButton.Margin = new Padding(2, 3, 2, 3);
+            ExitButton.Location = new Point(7, 460);
+            ExitButton.Margin = new Padding(2, 2, 2, 2);
             ExitButton.Name = "ExitButton";
-            ExitButton.Size = new Size(805, 39);
+            ExitButton.Size = new Size(644, 30);
             ExitButton.TabIndex = 7;
             ExitButton.Text = "Done";
             ExitButton.TextColor = Color.White;
@@ -628,16 +664,17 @@ namespace ADET_sample
             // 
             // Events_Info
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(223, 232, 215);
-            ClientSize = new Size(829, 650);
+            ClientSize = new Size(663, 494);
             Controls.Add(EventInfoLabel);
             Controls.Add(ExitButton);
             Controls.Add(panel3);
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Events_Info";
             Text = "Event Information";
+            TopMost = true;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);
